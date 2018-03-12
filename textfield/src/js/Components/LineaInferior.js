@@ -1,6 +1,6 @@
 import React, {components} from 'react';
 
-class CampoDeTexto extends Component
+class LineaInferior extends Component
 {
   render(){
     return(
@@ -9,4 +9,4 @@ class CampoDeTexto extends Component
   }
 }
 
-export default CampoDeTexto;
+export default LineaInferior;
