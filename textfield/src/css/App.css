@@ -1,4 +1,23 @@
 .App {
-  width: 180px;
-  display: block;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 15%;
+  border: 1px solid #cccbc8;
+  padding: 20px;
+  box-shadow: 1px 2px #cccbc8;
+}
+.Boton {
+  width: 10%;
+  margin-left: 40%;
+  margin-top: 1%;
+}
+.CampoDeTexto input {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0 0 0.5px 0;
+  border-bottom-color: #cccbc8;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
