@@ -8,7 +8,7 @@
 }
 .Boton {
   width: 10%;
-  margin-left: 40%;
+  margin-left: 45%;
   margin-top: 1%;
 }
 .CampoDeTexto input {
@@ -20,4 +20,15 @@
   border-top: none;
   border-left: none;
   border-right: none;
+}
+.logo {
+  width: 10%;
+  border-radius: 50%;
+  margin-left: 45%;
+}
+
+.ForgotPass {
+  color: #cccbc8;
+  font-size: 13px;
+  float: right;
 }
