@@ -3,7 +3,7 @@ import CampoDeTexto from './js/Components/CampoDeTexto.js';
 import LineaInferior from './js/Components/LineaInferior.js';
 import TextoExplicativo from './js/Components/TextoExplicativo.js';
 import Boton from './js/Components/Boton.js';
-import './App.css';
+import './css/App.css';
 
 class App extends Component {
   render() {
