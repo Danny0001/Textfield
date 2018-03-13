@@ -1,4 +1,4 @@
-import React, {components} from 'react';
+/*import React, {Component} from 'react';
 
 class TextoExplicativo extends Component
 {
@@ -10,3 +10,4 @@ class TextoExplicativo extends Component
 }
 
 export default TextoExplicativo;
+*/

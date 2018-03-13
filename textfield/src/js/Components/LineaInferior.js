@@ -1,4 +1,4 @@
-import React, {components} from 'react';
+/*import React, {Component} from 'react';
 
 class LineaInferior extends Component
 {
@@ -10,3 +10,4 @@ class LineaInferior extends Component
 }
 
 export default LineaInferior;
+*/
