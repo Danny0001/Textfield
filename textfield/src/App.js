@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import CampoDeTexto from './js/Components/CampoDeTexto.js';
-import Label from './js/Components/Label.js';
 import LineaInferior from './js/Components/LineaInferior.js';
 import TextoExplicativo from './js/Components/TextoExplicativo.js';
 import Boton from './js/Components/Boton.js';
