@@ -44,6 +44,16 @@ body {
   opacity: 1;
 }
 
+input:invalid {
+  border: 0 0 0.5px 0;
+  border-bottom-color:red;
+}
+
+input:valid {
+  border: 0 0 0.5px 0;
+  border-bottom-color:green;
+}
+
 input:focus {
 border: 0 0 0.5px 0;
 border-top: none;
