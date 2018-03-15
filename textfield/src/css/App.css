@@ -53,6 +53,16 @@ border-bottom-color:blue;
 outline: none;
 }
 
+input:invalid {
+  border: 0 0 0.5px 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: red;
+  outline: none;
+
+}
+
 
 .logo {
   width: 10%;
