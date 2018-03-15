@@ -15,7 +15,7 @@ class App extends Component {
             <CampoDeTexto Names={['email']} PlaceHolders={['Ingresa tu correo']} Types={['email']}/>
             <TextoExplicativo Texto={['Contraseña']}/>
             <CampoDeTexto Names={['password']} PlaceHolders={['Ingresa tu contraseña']} Types={['password']}/>
-            <a href='http://www.google.com' className='ForgotPass'>Olvidaste tu contraseña?</a>
+            <div className="link"><a href='http://www.google.com' className='ForgotPass'>Olvidaste tu contraseña?</a></div>
             <Boton Names={['Ingresar']}/>
           </form>
       </div>

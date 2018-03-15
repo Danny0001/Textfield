@@ -38,9 +38,6 @@ body {
   border-right: none;
 }
 
-.Boton {
-  margin-top: 5%;
-}
 
 ::placeholder{
   color:#cccbc8;
@@ -69,13 +66,19 @@ outline: none;
   float: right;
 }
 
-<<<<<<< HEAD
+
 .TextoExplicativo {
   font-size: 14px;
   color: #696969;
-=======
+}
+
 .Texto {
   color: #cccbc8;
   font-size: 13px;
->>>>>>> a34a1017f4e7484abf8b5495536061b95589a6fc
+}
+
+.link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
