@@ -4,7 +4,6 @@ import './../../css/App.css'
 class CampoDeTexto extends Component
 {
   render(){
-<<<<<<< HEAD
     const { Types, Names, PlaceHolders, required, Patterns } = this.props
 
     return(
