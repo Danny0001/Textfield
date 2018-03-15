@@ -2,18 +2,30 @@ body {
   height: 100vh;
 }
 
-.App {
-  /*width: 70%;*/
+#root {
+  width: 100%;
+  height: 100%;
+}
 
+.App {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login {
+  width: 70%;
   border: 1px solid #cccbc8;
-  padding: 20px;
+  padding: 2.5%;
   box-shadow: 1px 2px #cccbc8;
 }
-.Boton {
 
-  margin-left: 45%;
-  margin-right: 45%;
-  margin-top: 1%;
+#button{
+  display: flex;
+  justify-content: center;
 }
 .CampoDeTexto input {
   width: 100%;
@@ -24,6 +36,10 @@ body {
   border-top: none;
   border-left: none;
   border-right: none;
+}
+
+.Boton {
+  margin-top: 5%;
 }
 
 ::placeholder{

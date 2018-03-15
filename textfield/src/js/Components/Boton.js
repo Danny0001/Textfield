@@ -5,7 +5,7 @@ class Boton extends Component
 {
   render(){
     return(
-      <div>
+      <div id="button">
       <button type="submit" className="Boton">
       {this.props.Names}
       </button>
