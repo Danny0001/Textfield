@@ -12,9 +12,9 @@ class App extends Component {
         <form class="navbar-form" id="login">
             <img className="logo" src='http://dragene.no/wp-content/uploads/2016/06/default1.jpg'/>
             <TextoExplicativo Texto={['Correo']}/>
-            <CampoDeTexto Names={['email']} PlaceHolders={['Ingresa tu correo']} Types={['email']}/>
+            <CampoDeTexto Names={['email']} PlaceHolders={['Ingresa tu correo']} Types={['email']} pattern={["[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"]}/>
             <TextoExplicativo Texto={['Contraseña']}/>
-            <CampoDeTexto Names={['password']} PlaceHolders={['Ingresa tu contraseña']} Types={['password']}/>
+            <CampoDeTexto Names={['password']} PlaceHolders={['Ingresa tu contraseña']} Types={['password']} pattern={[".{6,}"]}/>
             <div className="link"><a href='http://www.google.com' className='ForgotPass'>Olvidaste tu contraseña?</a></div>
             <Boton Names={['Ingresar']}/>
           </form>
