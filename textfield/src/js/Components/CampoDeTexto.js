@@ -8,7 +8,7 @@ class CampoDeTexto extends Component
 
     return(
       <div className='CampoDeTexto'>
-        <input type={Types} name={Names} class="form-control" placeholder={PlaceHolders} pattern={Patterns}></input>
+        <input value type={Types} name={Names} class="form-control" placeholder={PlaceHolders} pattern={Patterns}></input>
       </div>
     );
   }
