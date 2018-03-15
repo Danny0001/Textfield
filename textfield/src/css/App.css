@@ -69,7 +69,13 @@ outline: none;
   float: right;
 }
 
+<<<<<<< HEAD
 .TextoExplicativo {
   font-size: 14px;
   color: #696969;
+=======
+.Texto {
+  color: #cccbc8;
+  font-size: 13px;
+>>>>>>> a34a1017f4e7484abf8b5495536061b95589a6fc
 }
