@@ -51,7 +51,7 @@ input:invalid {
 
 input:valid {
   border: 0 0 0.5px 0;
-  border-bottom-color:green;
+  border-bottom-color:blue;
 }
 
 input:focus {

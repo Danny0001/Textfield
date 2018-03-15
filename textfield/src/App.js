@@ -14,9 +14,9 @@ class App extends Component {
             <img className="logo" src='http://dragene.no/wp-content/uploads/2016/06/default1.jpg'/>
             <TextoExplicativo Texto={['Correo']}/>
 
-            <CampoDeTexto id="email" Names={['email']} PlaceHolders={['Ingresa tu correo']} Types={['email']} required Patterns="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+            <CampoDeTexto id="email" Names={['email']} PlaceHolders={['Ingresa tu correo']} Types={['email']} Patterns="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
             <TextoExplicativo Texto={['Contraseña']}/>
-            <CampoDeTexto Names={['password']} PlaceHolders={['Ingresa tu contraseña']} Types={['password']} required Patterns="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+            <CampoDeTexto Names={['password']} PlaceHolders={['Ingresa tu contraseña']} Types={['password']} Patterns="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
 
             <div className="link"><a href='http://www.google.com' className='ForgotPass'>Olvidaste tu contraseña?</a></div>
             <Boton Names={['Ingresar']}/>

@@ -4,11 +4,11 @@ import './../../css/App.css'
 class CampoDeTexto extends Component
 {
   render(){
-    const { Types, Names, PlaceHolders, required, Patterns } = this.props
+    const { Types, Names, PlaceHolders, Patterns } = this.props
 
     return(
       <div className='CampoDeTexto'>
-        <input type={Types} name={Names} class="form-control" placeholder={PlaceHolders} required pattern={Patterns}></input>
+        <input type={Types} name={Names} class="form-control" placeholder={PlaceHolders} pattern={Patterns}></input>
       </div>
     );
   }
