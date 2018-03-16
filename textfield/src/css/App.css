@@ -43,11 +43,12 @@ body {
   color:#cccbc8;
   opacity: 1;
 }
-
+/*
 input:invalid {
   border: 0 0 0.5px 0;
   border-bottom-color:red;
 }
+*/
 
 input:valid {
   border: 0 0 0.5px 0;
@@ -63,7 +64,7 @@ border-bottom-color:blue;
 outline: none;
 }
 
-input:invalid {
+/*input:invalid {
   border: 0 0 0.5px 0;
   border-top: none;
   border-left: none;
@@ -71,7 +72,7 @@ input:invalid {
   border-bottom-color: red;
   outline: none;
 
-}
+}*/
 
 
 .logo {
