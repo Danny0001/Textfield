@@ -12,15 +12,24 @@ class Login extends Component
   constructor(props)
   {
     super(props);
-    this.state = { email:'',
-  password:"" };
+    this.state = {
+      email:'',
+      password:""};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  clearAll(event) {
+    this.setState({
+      email: '',
+      password: ''
+    })
+  }
+  
   handleSubmit(event) {
-    console.log("dfsdfsdfsdfsd");
+    console.log("We are awesome !!");
+    this.clearAll();
     event.preventDefault();
   }
 
@@ -32,7 +41,7 @@ class Login extends Component
   render(){
     return(
       <div className="App">
-        <form class="navbar-form" id="login" onSubmit="this.handleSubmit">
+        <form class="navbar-form" id="login" onSubmit={ this.handleSubmit }>
             <img className="logo" src='http://dragene.no/wp-content/uploads/2016/06/default1.jpg'/>
             <TextoExplicativo Texto={['Correo']}/>
 
@@ -43,7 +52,8 @@ class Login extends Component
               Types={['email']}  Patterns="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
               onChange={ this.handleChange } />
             <TextoExplicativo Texto={['Contraseña']}/>
-            <CampoDeTexto id="password"
+            <CampoDeTexto
+              id="password"
               value={this.state.password}
               Names={['password']}
               PlaceHolders={['Ingresa tu contraseña']}
