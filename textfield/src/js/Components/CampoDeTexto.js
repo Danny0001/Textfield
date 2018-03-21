@@ -4,14 +4,17 @@ import './../../css/App.css'
 class CampoDeTexto extends Component
 {
   render(){
-    const {  Types, Names, PlaceHolders, value, Patterns, onChange } = this.props
+    const {  Types, Names, PlaceHolders, value, onChange } = this.props
 
     return(
       <div className='CampoDeTexto'>
         <input
-          onChange={ onChange }
+          type={Types}
+          name={Names}
+          placeholder={PlaceHolders}
           value={ value }
-          type={Types} name={Names} class="form-control" placeholder={PlaceHolders} pattern={Patterns} required ></input>
+          onChange={ onChange }
+          class="form-control"  ></input>
       </div>
     );
   }
