@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import CampoDeTexto from './CampoDeTexto.js';
 import LineaInferior from './LineaInferior.js';
 import TextoExplicativo from './TextoExplicativo.js';
-import validator from 'validator';
 import prub from './prub.js';
 import Boton from './Boton.js';
 import './../../css/App.css';
