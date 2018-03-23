@@ -3,18 +3,29 @@ import './../../css/App.css'
 
 class CampoDeTexto extends Component
 {
+  constructor(){
+    super();
+  }
+
+  onFocus(){
+    console.log("OnFocus");
+  }
+
+  onBlur(){
+    console.log("OnBlur");
+  }
   render(){
-    const {  Types, Names, PlaceHolders, value, onChange } = this.props
+    const {  Types, Names, PlaceHolders, value, Patterns, onChange } = this.props
 
     return(
       <div className='CampoDeTexto'>
-        <input
-          type={Types}
-          name={Names}
-          placeholder={PlaceHolders}
-          value={ value }
+        <input id="IngresoDatos"
           onChange={ onChange }
-          class="form-control"  ></input>
+          value={ value }
+          type={Types} name={Names} class="form-control" placeholder={PlaceHolders} pattern={Patterns} required
+          onFocus={this.onFocus}
+          onBlur={this.onBlur}
+          ></input>
       </div>
     );
   }
