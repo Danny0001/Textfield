@@ -1,7 +1,20 @@
 var express = require('express');
-var app = express();
 var parser = require("body-parser")
+import logger from 'morgan'
+import mongoose from 'mongoose'
+import passport from 'passport'
+import kue from 'kue'
 
+import { MONGO } from './config/config'
+import routesBinder from './libs/Route'
+
+const database  = process.env.MONGO_URL || MONGO.uri
+
+mongoose.Promise = global.Promise; //mongoose uso de promesas es6
+mongoose.connect(database);
+
+
+var app = express();
 
 app.use(parser());
 app.use(express.static("public"));

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import CampoDeTexto from './CampoDeTexto.js';
-import LineaInferior from './LineaInferior.js';
-import TextoExplicativo from './TextoExplicativo.js';
+import { reduxForm, Field } from 'redux-form'
+import axios from 'axios'
+import isEmpty from 'lodash/isEmpty'
 import emailValidator from 'email-validator'
 import { ToastContainer, toast } from 'react-toastify';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
-import isEmpty from 'lodash/isEmpty'
+
+import CampoDeTexto from './CampoDeTexto.js';
+import LineaInferior from './LineaInferior.js';
+import TextoExplicativo from './TextoExplicativo.js';
 import prub from './prub.js';
 import Boton from './Boton.js';
 import './../../css/App.css';
