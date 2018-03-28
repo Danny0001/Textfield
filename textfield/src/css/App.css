@@ -38,6 +38,11 @@ body {
   border-right: none;
 }
 
+.CampoDeTexto .tag {
+  background: lightblue;
+  color: black;
+}
+
 
 ::placeholder{
   color:#cccbc8;
@@ -63,6 +68,7 @@ border-right: none;
 border-bottom-color:blue;
 outline: none;
 }
+
 
 @keyframes deslizar {
   from {

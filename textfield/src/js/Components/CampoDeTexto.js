@@ -1,12 +1,23 @@
 import React, {Component} from 'react';
+import LineaInferior from './LineaInferior.js';
 import './../../css/App.css'
 
 class CampoDeTexto extends Component
 {
-  constructor(){
-    super();
+
+  constructor(props){
+    super(props);
+    this.state ={isToogleOn:false};
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
+handleClick(){
+  this.setState(prevState=>({
+    isToogleOn:
+    !prevState.isToogleOn
+  }))
+}
   onFocus(){
     console.log("OnFocus");
   }
@@ -14,6 +25,7 @@ class CampoDeTexto extends Component
   onBlur(){
     console.log("OnBlur");
   }
+
   render(){
     const {  Types, Names, PlaceHolders, value, Patterns, onChange } = this.props
 
@@ -26,6 +38,7 @@ class CampoDeTexto extends Component
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           ></input>
+          {this.state.isToogleOn ? "ON" : "OFF"}
       </div>
     );
   }
