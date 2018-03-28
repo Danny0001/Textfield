@@ -4,10 +4,10 @@ import arrayUniquePlugin from 'mongoose-unique-array'
 
 const UserSchema = new mongoose.Schema({
   email: {
-    type: String,
-    lowecase: true,
-    unique: true,
-    required:true,
+    type: String,    //tipo string
+    lowecase: true,   //mimnuscula
+    unique: true,   //debe ser unico
+    required:true,   //es obligatorio llenar
   },
   password: {
     type: String,
