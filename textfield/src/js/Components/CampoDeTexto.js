@@ -18,7 +18,8 @@ handleClick(){
     !prevState.isToogleOn
   }))
 }
-/*  onFocus(){
+
+  /*onFocus(){
     console.log("OnFocus");
   }
 
@@ -35,8 +36,8 @@ handleClick(){
           onChange={ onChange }
           value={ value }
           type={Types} name={Names} class="form-control" placeholder={PlaceHolders} pattern={Patterns} required
-          onFocus={this.onFocus}
-          onBlur={this.onBlur}
+          onFocus={() => {this.setState({ isToogleOn: true })}}
+          onBlur={() => {this.setState({ isToogleOn:false })}}
           ></input>
           <div id="Linea_base"></div>
           {this.state.isToogleOn ?
