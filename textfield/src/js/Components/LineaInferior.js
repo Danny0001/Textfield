@@ -5,7 +5,7 @@ class LineaInferior extends Component
   render(){
     return(
       <div className="LineaInferior">
-          <div id="LineaInferior"></div>
+          <div></div>
       </div>
     );
   }

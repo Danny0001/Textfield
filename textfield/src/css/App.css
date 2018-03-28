@@ -32,10 +32,11 @@ body {
   margin-top: 1px;
   margin-bottom: 1px;
   border: 0 0 0.5px 0;
-  border-bottom-color: #cccbc8;
+  /*border-bottom-color: #cccbc8;*/
   border-top: none;
   border-left: none;
   border-right: none;
+  border-bottom: none;
 }
 
 .CampoDeTexto .tag {
@@ -65,12 +66,12 @@ border: 0 0 0.5px 0;
 border-top: none;
 border-left: none;
 border-right: none;
-border-bottom-color:blue;
+/*border-bottom-color:blue;*/
 outline: none;
 }
 
 
-@keyframes deslizar {
+@keyframes expandir {
   from {
     position: relative;
     margin-left: 50%;
@@ -83,16 +84,48 @@ outline: none;
   }
 }
 
-#LineaInferior {
+@keyframes contraer {
+  from {
+    position: relative;
+    margin-left: 0%;
+    width: 100%;
+    visibility: visible;
+  }
+  to {
+    position: relative;
+    margin-left: 50%;
+    width: 0%;
+    visibility: visible;
+  }
+}
+
+#LineaInferior_onFocus {
   display: block;
   background: blue;
   width: 100%;
   height: 2px;
+  margin-top: -2px;
   animation-duration: 3s;
-  animation-name: deslizar;
+  animation-name: expandir;
 }
 
+#LineaInferior_onBlur {
+  display: block;
+  background: blue;
+  width: 100%;
+  height: 2px;
+  margin-top: -2px;
+  animation-duration: 3s;
+  animation-name: contraer;
+  visibility: hidden;
+}
 
+#Linea_base {
+  display: block;
+  background: #cccbc8;
+  width: 100%;
+  height: 2px;
+}
 /*input:invalid {
   border: 0 0 0.5px 0;
   border-top: none;

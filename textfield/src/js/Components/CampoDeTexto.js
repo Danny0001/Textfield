@@ -18,14 +18,14 @@ handleClick(){
     !prevState.isToogleOn
   }))
 }
-  onFocus(){
+/*  onFocus(){
     console.log("OnFocus");
   }
 
   onBlur(){
     console.log("OnBlur");
   }
-
+*/
   render(){
     const {  Types, Names, PlaceHolders, value, Patterns, onChange } = this.props
 
@@ -38,7 +38,14 @@ handleClick(){
           onFocus={this.onFocus}
           onBlur={this.onBlur}
           ></input>
-          {this.state.isToogleOn ? "ON" : "OFF"}
+          <div id="Linea_base"></div>
+          {this.state.isToogleOn ?
+            (
+              <div id="LineaInferior_onFocus"/>
+            ):(
+              <div id="LineaInferior_onBlur"/>
+            )
+          }
       </div>
     );
   }
