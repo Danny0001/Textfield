@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+/*import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 import arrayUniquePlugin from 'mongoose-unique-array'
 
@@ -69,6 +69,5 @@ UserSchema.pre('remove', function(next) {
     // Remove all the assignment docs that reference the removed User.
     this.model('Device').remove({ users: this._id }, next);
 });
-*/
 
-export default mongoose.model('User', UserSchema)
+export default mongoose.model('User', UserSchema)*/

@@ -6,7 +6,7 @@ import prub from './js/Components/prub.js';
 import Boton from './js/Components/Boton.js';
 import Login from './js/Components/Login.js';
 import './css/App.css';
-
+/*
 import logger from 'morgan'
 import mongoose from 'mongoose'
 import passport from 'passport'
@@ -23,9 +23,10 @@ mongoose.connect(database);
 var express = require('express')
 var bodyParser = require("body-parser")
 
-var app = express();
+
 
 app.use(bodyParser());
+*/
 
 class App extends Component {
   render() {
@@ -36,19 +37,19 @@ class App extends Component {
 }
 
 //app.use(express.static("public"));
-
+/*
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/kue', kue.app)
 
 routesBinder(app)
-
+*/
 
 /*app.post("/procesarDatos", function(req,res){
   var email = req.body.email;
   console.log(email);
 });*/
-
+/*
 app.get("/chaoo", function(req,res){
   res.send("bye");
 });
@@ -65,7 +66,7 @@ app.use((req, res, next) => {
   });
 })
 
-/*app.listen(3000, function(){
+app.listen(3000, function(){
   console.log('servidos corriendo en el puerto 3000');
 });*/
 

@@ -1,4 +1,4 @@
-export const express = {
+/*export const express = {
   port: process.env.PORT || 7000,
   ssl: process.env.HTTPS_PORT || 9999
 }
@@ -15,3 +15,4 @@ export const SECRET = {
 export const INDICATOR_KWH = { id: 1,
     name: 'INDICATOR_KWH',
     delay: 86400000*3, } //delay 3 dias
+*/

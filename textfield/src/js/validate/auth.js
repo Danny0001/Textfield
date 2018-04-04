@@ -1,4 +1,4 @@
-import validator from 'validator';
+/*import validator from 'validator';
 import isEmpty from 'lodash/isEmpty';
 import User from '../models/user';
 
@@ -66,4 +66,4 @@ export const validateSingUp = (body) => {
       }
     })
 
-}
+}*/
