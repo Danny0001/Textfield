@@ -70,5 +70,4 @@ UserSchema.pre('remove', function(next) {
     this.model('Device').remove({ users: this._id }, next);
 });
 */
-
 /*export default mongoose.model('User', UserSchema)*/

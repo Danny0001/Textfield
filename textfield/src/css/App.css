@@ -135,7 +135,14 @@ outline: none;
   outline: none;
 
 }*/
-
+#Linea_oculta{
+  display: block;
+  background: #cccbc8;
+  width: 100%;
+  height: 2px;
+  margin-top: -2px;
+  visibility: hidden; 
+}
 
 .logo {
   width: 10%;

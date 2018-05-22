@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+/*
 import { express } from './config/config'
 import { createServer } from 'http'
 
@@ -29,7 +30,7 @@ App.set('port', port);
 server.listen(port, () => {
     console.log('App Running in localhost:'+port)
 })
-
+*/
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
