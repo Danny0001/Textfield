@@ -99,16 +99,56 @@ class Login extends Component
     }
   }
 
-  handleSubmit(event) {
+  /*
+
+
+
+async function getEmail(email) {
+      const url = 'https://api.github.com/users/${email}'
+      const response = await fetch(url)
+      const json = await response.json()
+
+      console.log(json)
+    }*/
+
+    /*  async function getEmail(email) {
+            const url = 'https://api.github.com/users/${email}'
+            const response = await fetch(url)
+            const json = await response.json()
+
+            console.log(json)
+          }
+*/
+
+async handleSubmit(event) {
     event.preventDefault()
+
     const { email, password } = this.state
     this.setState({
       isFetching: true,
     });
     this.ValidateAll(email, password)
+    axios.get('https://jsonplaceholder.typicode.com/users',
+         {email,
+          password
+        })
+    .then(async response => {
+      const resemail = await fetch('https://jsonplaceholder.typicode.com/users${email}')
+      const json = await resemail.json()
+      console.log("en .then")
+      console.log(json)
+    })
+    .catch((err) => {
+      this.setState({
+        isFetching: false,
+      })})
 
+    //this.ValidateAll(email, password)
 
-    .then(() => {
+   /*axios.post('/auth/exists',
+        {email: this.email.value,
+         password: this.password.value} )*/
+  /*  .then(() => {
       this.setState({
         errors: {}
       })
@@ -134,8 +174,9 @@ class Login extends Component
       this.setState({
         isFetching: false,
       })
-    })
-  }
+    })*/
+
+}
 
   render(){
     const { errors } = this.state
