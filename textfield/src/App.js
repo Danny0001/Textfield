@@ -5,6 +5,9 @@ import TextoExplicativo from './js/Components/TextoExplicativo.js';
 import prub from './js/Components/prub.js';
 import Boton from './js/Components/Boton.js';
 import Login from './js/Components/Login.js';
+import Home from './js/Components/Home.js';
+import {BrowserRouter,Route} from 'react-router-dom';
+
 import './css/App.css';
 /*
 import logger from 'morgan'
@@ -31,7 +34,14 @@ app.use(bodyParser());
 class App extends Component {
   render() {
     return (
-      <Login/>
+      <BrowserRouter>
+        <div className="App">
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/login" component={Login}/>
+        </div>
+      </BrowserRouter>
+
+      //<Login/>
     );
   }
 }

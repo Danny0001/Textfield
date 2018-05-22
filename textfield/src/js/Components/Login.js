@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 /*import { reduxForm, Field } from 'redux-form'*/
-/*import axios from 'axios'*/
+import axios from 'axios'
 import isEmpty from 'lodash/isEmpty'
 import emailValidator from 'email-validator'
 import { ToastContainer, toast } from 'react-toastify';
