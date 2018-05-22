@@ -1,4 +1,4 @@
-import express from 'express'
+/*import express from 'express'
 import passport from 'passport'
 import AuthController from '../controllers/auth'
 
@@ -12,3 +12,4 @@ router.post('/signup', (req, res) => auth.signup(req, res));
 router.get('/:email/exists', (req, res) => auth.existEmail(req, res))
 
 export default router;
+*/

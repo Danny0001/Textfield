@@ -1,4 +1,4 @@
-import authRoute from '../routes/auth'
+/*import authRoute from '../routes/auth'
 
 const routes = [
     {
@@ -10,3 +10,4 @@ const routes = [
 export default (app) => {
   routes.forEach((router) => app.use(router.path, router.file));
 };
+*/

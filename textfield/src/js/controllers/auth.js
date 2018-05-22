@@ -1,4 +1,4 @@
-import express from 'express';
+/*import express from 'express';
 import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
 import validator from 'validator';
@@ -176,3 +176,4 @@ existEmail(req, res){
 }
 
 export default AuthController;
+*/

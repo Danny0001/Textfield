@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+/*import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 import arrayUniquePlugin from 'mongoose-unique-array'
 
@@ -71,4 +71,4 @@ UserSchema.pre('remove', function(next) {
 });
 */
 
-export default mongoose.model('User', UserSchema)
+/*export default mongoose.model('User', UserSchema)*/
