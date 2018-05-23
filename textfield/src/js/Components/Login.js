@@ -136,6 +136,7 @@ async handleSubmit(event) {
         password:this.state.password
       })
     .then(async response => {
+      const resemail = await fetch('api/user/login${email}')
       const json = await resemail.json()
       console.log("en .then")
       console.log(json)
