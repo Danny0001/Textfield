@@ -6,6 +6,7 @@ import emailValidator from 'email-validator'
 import { ToastContainer, toast } from 'react-toastify';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 
+//import controllers from '../../../../server/api/user/controllers.js';
 import CampoDeTexto from './CampoDeTexto.js';
 import LineaInferior from './LineaInferior.js';
 import TextoExplicativo from './TextoExplicativo.js';
@@ -135,7 +136,6 @@ async handleSubmit(event) {
         password:this.state.password
       })
     .then(async response => {
-      const resemail = await fetch('https://jsonplaceholder.typicode.com/users${email}')
       const json = await resemail.json()
       console.log("en .then")
       console.log(json)

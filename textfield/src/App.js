@@ -7,8 +7,9 @@ import Boton from './js/Components/Boton.js';
 import Login from './js/Components/Login.js';
 import Home from './js/Components/Home.js';
 import {BrowserRouter,Route} from 'react-router-dom';
-
 import './css/App.css';
+
+
 /*
 import logger from 'morgan'
 import mongoose from 'mongoose'
@@ -79,5 +80,8 @@ app.use((req, res, next) => {
 app.listen(3000, function(){
   console.log('servidos corriendo en el puerto 3000');
 });*/
+var app = express();
+
+app.use(function(req, res, next) { res.header("Access-Control-Allow-Origin", "*"); res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"); next(); });
 
 export default App;
