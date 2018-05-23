@@ -128,10 +128,12 @@ async handleSubmit(event) {
       isFetching: true,
     });
     this.ValidateAll(email, password)
-    axios.get('https://jsonplaceholder.typicode.com/users',
-         {email,
-          password
-        })
+    axios({
+        method: "POST",
+        url: "http://localhost:8001/api/user/login",
+        email: this.state.email,
+        password:this.state.password
+      })
     .then(async response => {
       const resemail = await fetch('https://jsonplaceholder.typicode.com/users${email}')
       const json = await resemail.json()

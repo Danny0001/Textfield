@@ -13,8 +13,8 @@ const loginUser = (req,res)=> {
     if (error) return res.status(500).json({error: 'ERROR SIGNING THE TOKEN'});
     res.cookie('access_token',TOKEN,{
       maxAge: new Date(Date.now()+3600000),
-      httpOnly:true,
-      secure:true,
+      httpOnly:false,
+      secure:false,
     });
     return res.status(200).json({message: 'User logged with success'});
   });
@@ -23,8 +23,8 @@ const loginUser = (req,res)=> {
 const logoutUser = (req,res)=> {
   res.clearCookie('access_token',req.cookies.access_token,{
     maxAge: new Date(Date.now()+3600000),
-    httpOnly:true,
-    secure:true,
+    httpOnly:false,
+    secure:false,
   });
   res.status(200).json({message:'Logout with success'});
 };
