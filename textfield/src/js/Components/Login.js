@@ -5,6 +5,8 @@ import isEmpty from 'lodash/isEmpty'
 import emailValidator from 'email-validator'
 import { ToastContainer, toast } from 'react-toastify';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
+import { Redirect } from "react-router-dom";
+import Application from "./Application.js";
 
 //import controllers from '../../../../server/api/user/controllers.js';
 import CampoDeTexto from './CampoDeTexto.js';
@@ -25,11 +27,19 @@ class Login extends Component
       password:"",
       errors: {},
       isFetching: false,
+      redirect:false,
+      logged:false,
     };
     this.clearAll = this.clearAll.bind(this)
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  componentDidMount() {
+  if (document.cookie) {
+    this.setState({ logged:true })
+  }
+}
 
   handleChange(event){
     this.setState({[event.target.name]: event.target.value});
@@ -40,9 +50,12 @@ class Login extends Component
       email: '',
       password: '',
       errors: {},
-      isFetching: false
+      isFetching: false,
+      redirect: false
     })
   }
+
+
 
   ValidateAll(email, password){
     let errors = {}
@@ -130,6 +143,7 @@ async handleSubmit(event) {
     });
     this.ValidateAll(email, password)
     axios({
+<<<<<<< HEAD
       method: 'post',
       url: 'http://localhost:8001/api/user/login',
       email: this.state.email,
@@ -139,11 +153,21 @@ async handleSubmit(event) {
          {email,
           password
         })*/
+=======
+        method: "POST",
+        url: "http://localhost:8001/api/user/login",
+        email: this.state.email,
+        password:this.state.password
+      })
+>>>>>>> c934074819efd46c8bac202fad011479d719d35e
     .then(async response => {
-      const resemail = await fetch('api/user/login${email}')
-      const json = await resemail.json()
-      console.log("en .then")
-      console.log(json)
+      //const resemail = await fetch('api/user/login${email}')
+      //const json = await resemail.json()
+      //console.log("en .then")
+      this.setState({
+        redirect:true,
+      })
+      //console.log(json)
     })
     .catch((err) => {
       this.setState({
@@ -186,9 +210,12 @@ async handleSubmit(event) {
 }
 
   render(){
-    const { errors } = this.state
+    const { errors, redirect,logged } = this.state
     return(
       <div className="App">
+        {(redirect || logged) ? (
+          <Redirect to="/app" />
+        ) : (
         <form class="navbar-form" id="login" onSubmit={ this.handleSubmit }>
             <img className="logo" src='http://dragene.no/wp-content/uploads/2016/06/default1.jpg'/>
             <TextoExplicativo Texto={['Correo']}/>
@@ -214,6 +241,7 @@ async handleSubmit(event) {
             <div className="link"><a href='http://www.google.com' className='ForgotPass'>Olvidaste tu contraseña?</a></div>
             <Boton onClick={ this.handleClick } Names={['Ingresar']}/>
           </form>
+        )}
       </div>
     );
   }

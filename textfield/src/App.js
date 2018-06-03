@@ -6,8 +6,11 @@ import prub from './js/Components/prub.js';
 import Boton from './js/Components/Boton.js';
 import Login from './js/Components/Login.js';
 import Home from './js/Components/Home.js';
+import Application from './js/Components/Application.js';
 import {BrowserRouter,Route} from 'react-router-dom';
 import './css/App.css';
+
+
 /*
 const express = require('express')
 const app = express()
@@ -41,6 +44,7 @@ class App extends Component {
         <div className="App">
           <Route exact path="/" component={Home}/>
           <Route exact path="/login" component={Login}/>
+          <Route exact path="/app" component={Application}/>
         </div>
       </BrowserRouter>
 
