@@ -9,10 +9,10 @@ require('dotenv').config();
 const loginUser = (req,res)=> {
   const {email,password}=req.body;
 
-  jwt.sign({email, password},process.env.COOKIE_SECRET, {expiresIn:'1h'}, (error,TOKEN)=> {
+  jwt.sign({email, password},process.env.COOKIE_SECRET, {expiresIn:3600000}, (error,TOKEN)=> {
     if (error) return res.status(500).json({error: 'ERROR SIGNING THE TOKEN'});
     res.cookie('access_token',TOKEN,{
-      maxAge: new Date(Date.now()+3600000),
+      expires: new Date(Date.now()+(3600*1000)),
       httpOnly:true,
       secure:true,
     });
@@ -22,7 +22,7 @@ const loginUser = (req,res)=> {
 
 const logoutUser = (req,res)=> {
   res.clearCookie('access_token',req.cookies.access_token,{
-    maxAge: new Date(Date.now()+3600000),
+    expires: new Date(Date.now()+(3600*1000)),
     httpOnly:true,
     secure:true,
   });

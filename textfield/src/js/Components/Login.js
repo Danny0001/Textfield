@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 /*import { reduxForm, Field } from 'redux-form'*/
-import axios from 'axios'
-import isEmpty from 'lodash/isEmpty'
-import emailValidator from 'email-validator'
-import { ToastContainer, toast } from 'react-toastify';
-import {NotificationContainer, NotificationManager} from 'react-notifications';
+import axios from 'axios';
+import isEmpty from 'lodash/isEmpty';
+import emailValidator from 'email-validator';
+//import { ToastContainer, toast } from 'react-toastify';
+//import {NotificationContainer, NotificationManager} from 'react-notifications';
 import { Redirect } from "react-router-dom";
-import Application from "./Application.js";
+//import Application from "./Application.js";
 
 //import controllers from '../../../../server/api/user/controllers.js';
 import CampoDeTexto from './CampoDeTexto.js';
-import LineaInferior from './LineaInferior.js';
+//import LineaInferior from './LineaInferior.js';
 import TextoExplicativo from './TextoExplicativo.js';
-import prub from './prub.js';
+//import prub from './prub.js';
 import Boton from './Boton.js';
 import './../../css/App.css';
 
@@ -92,7 +92,7 @@ class Login extends Component
     })
   }
 
-  createNotification (type) {
+  /*createNotification (type) {
     return () => {
       switch (type) {
         case 'info':
@@ -112,6 +112,7 @@ class Login extends Component
       }
     }
   }
+  */
 
   /*
 
@@ -149,6 +150,7 @@ async handleSubmit(event) {
         password:this.state.password
       })
     .then(async response => {
+      console.log("Cookies are ", document.cookie)
       //const resemail = await fetch('api/user/login${email}')
       //const json = await resemail.json()
       //console.log("en .then")

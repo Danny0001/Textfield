@@ -33,5 +33,5 @@ server.listen(port, () => {
 */
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
 registerServiceWorker();
