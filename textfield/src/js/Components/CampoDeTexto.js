@@ -34,7 +34,7 @@ handleClick(){
 
     return(
       <div className='CampoDeTexto'>
-        <input id="IngresoDatos"
+        <input className="IngresoDatos"
           onChange={ onChange }
           value={ value }
           type={Types} name={Names} class="form-control" placeholder={PlaceHolders} pattern={Patterns} required
