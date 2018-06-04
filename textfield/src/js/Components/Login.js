@@ -144,11 +144,23 @@ async handleSubmit(event) {
     });
     this.ValidateAll(email, password)
     axios({
+<<<<<<< HEAD
+      method: 'post',
+      url: 'http://localhost:8001/api/user/login',
+      email: this.state.email,
+      password: this.state.password
+    })
+    /*axios.post('api/user/login',
+         {email,
+          password
+        })*/
+=======
         method: "POST",
         url: "http://localhost:8001/api/user/login",
         email: this.state.email,
         password:this.state.password
       })
+>>>>>>> c934074819efd46c8bac202fad011479d719d35e
     .then(async response => {
       console.log("Cookies are ", document.cookie)
       //const resemail = await fetch('api/user/login${email}')
