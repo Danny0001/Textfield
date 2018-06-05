@@ -117,7 +117,6 @@ class Login extends Component
   /*
 
 
-
 async function getEmail(email) {
       const url = 'https://api.github.com/users/${email}'
       const response = await fetch(url)

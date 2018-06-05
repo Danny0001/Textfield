@@ -1,7 +1,6 @@
 import jwt from 'jsonwebtoken';
 require('dotenv').config();
 
-
 /*const getPublications =(req,res)=>{
   res.status(200).json({user:req.user});
 };

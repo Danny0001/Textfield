@@ -16,5 +16,4 @@ app.use(logger('dev'));
 
 app.use('/api',[UserRoutes]);
 
-
 export default app;
