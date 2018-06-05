@@ -5,7 +5,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bcrypt": "^1.0.3",
+    "cookie-parser": "^1.4.3",
     "email-validator": "^1.1.1",
+    "express-session": "^1.15.6",
     "http": "0.0.0",
     "jsonwebtoken": "^8.2.0",
     "mongoose": "^5.0.12",
@@ -14,6 +16,7 @@
     "passport": "^0.4.0",
     "rand-token": "^0.4.0",
     "react": "^16.2.0",
+    "react-cookie": "^2.1.6",
     "react-dom": "^16.2.0",
     "react-native": "^0.54.3",
     "react-native-material-kit": "^0.5.1",
