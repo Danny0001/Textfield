@@ -15,6 +15,7 @@ var session = require('express-session');
 
 
 
+
 app.use(function(req, res, next) { res.header("Access-Control-Allow-Origin", "*");
                                   res.header('Access-Control-Allow-Credentials', true);
                                   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With,Content-Type, Accept");
@@ -24,7 +25,15 @@ app.use(function(req, res, next) { res.header("Access-Control-Allow-Origin", "*"
 app.use (bodyParser.urlencoded({extended:false}));
 app.use (bodyParser.json());
 //app.use(cookieParser());
-app.use(loopback.token());
+//app.use(loopback.token());
+
+app.use(session({
+  secret: 'Sup3R$ecR3t'
+  cookie: {
+    httpOnly: true,
+    expires: new Date(Date.now() + 60000)
+  }
+});
 //app.use(session )
 /*
 app.use("/", function(req, res) {

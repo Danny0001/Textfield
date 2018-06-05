@@ -16,6 +16,9 @@ import TextoExplicativo from './TextoExplicativo.js';
 import Boton from './Boton.js';
 import './../../css/App.css';
 
+import { instanceOf } from 'prop-types';
+import { withCookies, Cookies } from 'react-cookie';
+
 class Login extends Component
 {
 
@@ -35,7 +38,12 @@ class Login extends Component
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  static propTypes = {
+    cookies: instanceOf(Cookies).isRequired
+  };
+
   componentDidMount() {
+    const { cookies } = this.props;
   if (document.cookie) {
     this.setState({ logged:true })
   }
@@ -138,6 +146,11 @@ async handleSubmit(event) {
     event.preventDefault()
 
     const { email, password } = this.state
+/*
+    const { cookies } = this.props;
+    cookies.set('name', name, { path: '/login' });
+    this.setState({ name });
+*/
     this.setState({
       isFetching: true,
     });
