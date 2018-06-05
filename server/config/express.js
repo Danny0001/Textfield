@@ -27,6 +27,8 @@ app.use (bodyParser.json());
 //app.use(cookieParser());
 //app.use(loopback.token());
 
+// Las cookies se crean en el servidor y son enviadas al cliente,
+//así, con cada petición se envían implícitas.
 app.use(session({
   secret: 'Sup3R$ecR3t'
   cookie: {
@@ -34,6 +36,7 @@ app.use(session({
     expires: new Date(Date.now() + 60000)
   }
 });
+
 //app.use(session )
 /*
 app.use("/", function(req, res) {

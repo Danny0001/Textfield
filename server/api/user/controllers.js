@@ -16,8 +16,19 @@ const loginUser = (req,res)=> {
             password: req.body.password
         },
 
+  //Aqui va la validacion
+
+  UserRepository.login(email, password)
+
+  .then(logged => {
+    if(logged) { // login correcto
+      res.session.user = { email };
+      res.jsonp({ success: true });
+    }
+}
   .then((user) =>{
     if(user){
+
       user.comparePassword(req.body.password, (err, isMatch) =>{
         if(isMatch && !err){
           const userData = {
