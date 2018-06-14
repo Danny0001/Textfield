@@ -36,6 +36,9 @@ app.use(session({
     expires: new Date(Date.now() + 60000)
   }
 });
+//Una vez añadido el middleware de sesión, cuando se loguee un usuario
+// y se toque el objeto session de request empezará su sesión.
+
 
 //app.use(session )
 /*
