@@ -15,9 +15,11 @@
     "cors": "^2.8.4",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "jsonwebtoken": "^8.2.1",
-    "morgan": "^1.9.0",
-    "express-session": "latest"
+    "loopback": "^3.20.0",
+    "loopback-boot": "^2.27.1",
+    "morgan": "^1.9.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

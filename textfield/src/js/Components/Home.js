@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import './../../css/App.css'
 import Logo from './../../images/Logo.png'
+import 'font-awesome/css/font-awesome.css';
 
 class Home extends Component {
   render() {
@@ -35,10 +36,84 @@ class Home extends Component {
         </section>
         </div>
         <div className="seccion3">
-          <section id="beneficios"></section>
+          <section id="beneficios">
+            <h1>Beneficios</h1>
+            <div><br/></div>
+            <div><br/></div>
+            <div><br/></div>
+            <div className="beneficio">
+              <div className="bloque">
+                <div className="icon">
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                </div>
+                <div className="text">
+                  <h3>CONTRIBUYE CON EL MEDIO AMBIENTE Y REDUCE TU HUELLA DE CARBONO</h3>
+                </div>
+              </div>
+              <div className="bloque">
+                <div className="icon">
+                  <i class="fa fa-battery-three-quarters" aria-hidden="true"></i>
+                </div>
+                <div className="text">
+                  <h3>AHORRA ENTRE UN 10% Y 20% DE CONSUMO ENERGÉTICO</h3>
+                </div>
+              </div>
+              <div className="bloque">
+                <div className="icon">
+                  <i class="fa fa-industry" aria-hidden="true"></i>
+                </div>
+                <div className="text">
+                  <h3>VERIFICA TU PLAN ENERGÉTICO Y CERTIFICATE EN EFICIENCIA ENERGÉTICA (ISO 50.001 )</h3>
+                </div>
+              </div>
+            </div>
+            <div className="beneficio">
+              <div className="bloque">
+                <div className="icon">
+                  <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                </div>
+                <div className="text">
+                  <h3>ADMINISTRA TUS MEDIOS DE GENERACIÓN ELÉCTRICA</h3>
+                </div>
+              </div>
+              <div className="bloque">
+                <div className="icon">
+                  <i class="fa fa-sun-o" aria-hidden="true"></i>
+                </div>
+                <div className="text">
+                  <h3>INTEGRA VARIABLES ENERGÉTICAS A TU PROCESO DE PRODUCCIÓN</h3>
+                </div>
+              </div>
+              <div className="bloque">
+                <div className="icon">
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                </div>
+                <div className="text">
+                  <h3>GESTIONA TU PLAN DE CONSUMO ENERGÉTICO</h3>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
         <div className="seccion4">
-          <section id="contacto"></section>
+          <section id="contacto">
+            <h1>Contacto</h1>
+            <div>
+              <h3>¿Tienes dudas, consultas o sugerencias? No dudes en enviarnos un mail</h3>
+              <div className="contact">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <p>domainyourenergy@gmail.com</p>
+              </div>
+            </div>
+            <div>
+              <h3>Puedes encontrarnos en</h3>
+              <div className="contact">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <p>Virginio Arias 1371, Ñuñoa, Región Metropolitana</p>
+              </div>
+            </div>
+          </section>
+
         </div>
       </div>
     );
