@@ -4,14 +4,14 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import {UserRoutes} from '../api';
 
-import session from 'express-session';
-var loopback = require('loopback');
-var boot = require('loopback-boot');
+//import session from 'express-session';
+//var loopback = require('loopback');
+//var boot = require('loopback-boot');
 
 const app = express();
 var cors = require('cors');
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
+//var cookieParser = require('cookie-parser');
+//var session = require('express-session');
 
 
 
@@ -29,13 +29,13 @@ app.use (bodyParser.json());
 
 // Las cookies se crean en el servidor y son enviadas al cliente,
 //así, con cada petición se envían implícitas.
-app.use(session({
+/*app.use(session({
   secret: 'Sup3R$ecR3t'
   cookie: {
     httpOnly: true,
     expires: new Date(Date.now() + 60000)
   }
-});
+});*/
 //Una vez añadido el middleware de sesión, cuando se loguee un usuario
 // y se toque el objeto session de request empezará su sesión.
 

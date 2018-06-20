@@ -3,13 +3,13 @@ import User from '../../models/user';
 require('dotenv').config();
 
 
-/*const getPublications =(req,res)=>{
+const getPublications =(req,res)=>{
   res.status(200).json({user:req.user});
 };
-*/
-var cookieParser = require('cookie-parser');
 
-const loginUser = (req,res)=> {
+//var cookieParser = require('cookie-parser');
+
+/*const loginUser = (req,res)=> {
 //  const {email,password}=req.body;
   User.login({
             email: req.body.email,
@@ -26,7 +26,8 @@ const loginUser = (req,res)=> {
       res.jsonp({ success: true });
     }
 }
-  .then((user) =>{
+*/
+/*  .then((user) =>{
     if(user){
 
       user.comparePassword(req.body.password, (err, isMatch) =>{
@@ -80,8 +81,8 @@ const loginUser = (req,res)=> {
     .json({error: 'ERROR SIGNING THE TOKEN'});
   })
 };
+*/
 
-/*
 const loginUser = (req,res)=> {
 const {email,password}=req.body;
 jwt.sign({email, password},process.env.COOKIE_SECRET, {expiresIn:3600000}, (error,TOKEN)=> {
@@ -91,9 +92,11 @@ jwt.sign({email, password},process.env.COOKIE_SECRET, {expiresIn:3600000}, (erro
     httpOnly:true,
     secure:true,
     });
+    return res.status(200).json({message: 'User logged with success'});
+  });
 }
-}
-*/
+
+
 const logoutUser = (req,res)=> {
   res.clearCookie('access_token',req.cookies.access_token,{
     expires: new Date(Date.now()+(3600*1000)),
