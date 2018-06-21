@@ -7,22 +7,29 @@ class BotonControl extends Component {
     this.state = {
       estado:false
     };
-    this.controlButton= this.controlButton.bind(this);
+    //this.controlButton= this.controlButton.bind(this);
   }
-  controlButton(){
+  /*controlButton(){
     this.setState(prevState=>({
       estado:
       !prevState.estado
     }))
-  }
+  }*/
 
+  toggle() {
+      this.setState({estado: !this.state.estado});
+    }
 
 
   render() {
+    let botonAct = ["botonapp"];
+    if(this.state.estado) {
+      botonAct.push('botonActive');
+    }
     return (
       <div>
           <div>
-            <button className="botonapp {this.state.estado ? 'botonappActive': 'botonappInactive'}" onClick={this.controlButton}>{this.state.estado ? 'ON' : 'OFF'}</button>
+            <button className={botonAct.join(' ')} onClick={this.toggle.bind(this)}>{this.state.estado ? 'ON' : 'OFF'}</button>
           </div>
       </div>
     );
