@@ -39,14 +39,18 @@ function_logout(){
   render() {
     const { redirect} = this.state
     return (
-      <div>
+      <div className='application'>
         {(redirect) ? (
           <Redirect to="/login" />
         ) : (
-          <div>
-            <button id="button" onClick={this.function_logout}>cerrar sesion</button>
-            <BotonControl></BotonControl>
+          <div className="application">
+            <div className="barraIzquierda"></div>
+            <div>
+              <button id="button" onClick={this.function_logout}>cerrar sesion</button>
+              <BotonControl></BotonControl>
+            </div>
           </div>
+
       )}
       </div>
     );

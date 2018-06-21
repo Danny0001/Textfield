@@ -20,7 +20,7 @@ class BotonControl extends Component {
     return (
       <div>
           <div>
-            <button className="green" onClick={this.controlButton}>{this.state.estado ? 'ON' : 'OFF'}</button>
+            <button className="botonapp" onClick={this.controlButton}>{this.state.estado ? 'ON' : 'OFF'}</button>
           </div>
       </div>
     );
