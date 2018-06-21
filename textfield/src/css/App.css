@@ -503,3 +503,11 @@ outline: none;
 
   box-shadow: 0 5px 50px rgba(83, 239, 35, 0.68);
 }
+
+
+.barraSuperior{
+  background-color: grey;
+  width: 75%;
+  height: 80px;
+    color: #62D240;
+}
