@@ -4,7 +4,7 @@ import Boton from './Boton.js';
 import { Redirect } from "react-router-dom";
 import './../../css/App.css'
 import BotonControl from './BotonControl.js';
-import barraLateral from './barraLateral.js';
+import BarraLateral from './BarraLateral.js';
 class Application extends Component {
 
 constructor(props)
@@ -45,8 +45,8 @@ function_logout(){
           <Redirect to="/login" />
         ) : (
           <div className="application">
+          <BarraLateral></BarraLateral>
             <div>
-              <barraLateral></barraLateral>
               <button id="button" onClick={this.function_logout}>cerrar sesion</button>
               <BotonControl></BotonControl>
             </div>
