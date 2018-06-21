@@ -16,11 +16,13 @@ class BotonControl extends Component {
     }))
   }
 
+
+
   render() {
     return (
       <div>
           <div>
-            <button className="botonapp" onClick={this.controlButton}>{this.state.estado ? 'ON' : 'OFF'}</button>
+            <button className="botonapp {this.state.estado ? 'botonappActive': 'botonappInactive'}" onClick={this.controlButton}>{this.state.estado ? 'ON' : 'OFF'}</button>
           </div>
       </div>
     );
