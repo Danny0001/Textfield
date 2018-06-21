@@ -21,7 +21,7 @@ class BotonControl extends Component {
   render() {
     return (
       <div>
-          <div>
+          <div id="buttonCont">
             <button className="botonapp {this.state.estado ? 'botonappActive': 'botonappInactive'}" onClick={this.controlButton}>{this.state.estado ? 'ON' : 'OFF'}</button>
           </div>
       </div>
