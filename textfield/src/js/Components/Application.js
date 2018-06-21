@@ -3,6 +3,7 @@ import axios from 'axios';
 import Boton from './Boton.js';
 import { Redirect } from "react-router-dom";
 import './../../css/App.css'
+import BotonControl from './BotonControl.js';
 class Application extends Component {
 
 constructor(props)
@@ -44,7 +45,7 @@ function_logout(){
         ) : (
           <div>
             <button id="button" onClick={this.function_logout}>cerrar sesion</button>
-            <img src="http://acidmonkey.net/img/pag_en_construccion.jpg"></img>
+            <BotonControl></BotonControl>
           </div>
       )}
       </div>
