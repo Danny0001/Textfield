@@ -460,7 +460,20 @@ outline: none;
   -o-transition: all .1s ease-in;
   transition: all .1s ease-in;
 }
-.botonapp .botonActive {
+.botonapp.botonActive {
+  left: 10px;
+  top: 10px;
+  width: 80px;
+  height: 80px;
+  background-position: 0 0px;
+  color: #62D240;
+  -webkit-box-shadow: rgba(0,0,0,.4) 0 3px 8px;
+  -moz-box-shadow: rgba(0,0,0,.4) 0 3px 8px;
+  //box-shadow: rgba(0,0,0,.4) 0 3px 8px;
+
+  box-shadow: 0 5px 50px rgba(83, 239, 35, 0.68);
+/*
+  /*
   background-position: 0 0px;
 
   -webkit-box-shadow: rgba(0,0,0,.4) 0 3px 8px;
@@ -468,7 +481,8 @@ outline: none;
   box-shadow: rgba(0,0,0,.4) 0 3px 8px;
 
   box-shadow: 0 5px 50px rgba(83, 239, 35, 0.68);
-}
+
+*/}
 
 .botonapp:hover {
   background-position: 0 0px;
