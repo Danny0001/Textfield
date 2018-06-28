@@ -6,6 +6,7 @@ import './../../css/App.css'
 import BotonControl from './BotonControl.js';
 import BarraLateral from './BarraLateral.js';
 import BarraSuperior from './BarraSuperior.js';
+import InfoMediciones from './InfoMediciones.js';
 class Application extends Component {
 
 constructor(props)
@@ -46,10 +47,13 @@ function_logout(){
           <Redirect to="/login" />
         ) : (
           <div className="application">
-            <BarraSuperior></BarraSuperior>
             <BarraLateral></BarraLateral>
+            <div className="barraSuperior">
+              <button id="button" onClick={this.function_logout}>Cerrar sesión</button>
+            </div>
+            <InfoMediciones></InfoMediciones>
+
             <div>
-              <button id="button" onClick={this.function_logout}>cerrar sesion</button>
               <BotonControl></BotonControl>
             </div>
           </div>

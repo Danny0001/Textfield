@@ -44,6 +44,11 @@ body {
 #button{
   display: flex;
   justify-content: center;
+  height: 100%;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
 }
 .CampoDeTexto input {
   width: 100%;
@@ -360,13 +365,20 @@ outline: none;
 }*/
 .barraIzquierda{
   width: 25%;
-  background: gray;
+  background-image: url("imagenes/fondo1.jpg");
   height: 100%;
   margin:0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .application{
   width: 100%;
-  height: 100%
+  height: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 /*
 .botonapp{
@@ -505,9 +517,44 @@ outline: none;
 }
 
 
-.barraSuperior{
+/*.barraSuperior{
   background-color: grey;
   width: 75%;
   height: 80px;
     color: #62D240;
+}
+*/
+
+.barraSuperior{
+  background-image: url("imagenes/fondo2.jpg");
+  width: 75%;
+  height: 8%;
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+
+}
+
+.InfoMediciones{
+  background-color:#A4A4A4;
+  height: 92%;
+  width: 75%;
+}
+
+.logo2{
+  border-radius: 50%;
+  width: 50%;
+}
+.barraIzquierda hr{
+  width: 90%;
+}
+.mainbar{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+}
+.element{
+  color: white;
 }

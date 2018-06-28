@@ -9,9 +9,7 @@ import BotonControl from './BotonControl.js';
 class BarraSuperior extends Component {
   render() {
     return (
-      <div>
-        <div id="barraSuperior">jnjkn
-      </div>
+      <div className="barraSuperior">
       </div>
     );
   }

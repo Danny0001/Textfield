@@ -24,7 +24,7 @@ app.use(function(req, res, next) { res.header("Access-Control-Allow-Origin", "*"
 //app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
 app.use (bodyParser.urlencoded({extended:false}));
 app.use (bodyParser.json());
-//app.use(cookieParser());
+app.use(cookieParser());
 //app.use(loopback.token());
 
 // Las cookies se crean en el servidor y son enviadas al cliente,
