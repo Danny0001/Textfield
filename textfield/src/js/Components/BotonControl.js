@@ -22,27 +22,21 @@ class BotonControl extends Component {
 
   //  console.log(this.state.estado);
     var est= this.state.estado;
-      if(est){
-        axios.put('device/PIRD-SMARTMETERLAB-1/command', {
-          value: "OFF"
-        }).then(response =>{
-          console.log("Exito");
-        })
-        .catch((err)=>{
-          console.log("Error");
-        })
+
+    axios.put('http://10.108.0.45:3001/api/device/PIRD-SMARTMETERLAB-1/command/POWER', {
+      value: "toggle"},
+      {header: {
+        'Authorization': "Bearer",
+        'Content-Type': 'application/json'
+      }}
+    ).then(response =>{
+      console.log("Exito");
+    })
+    .catch((err)=>{
+      console.log("Error", err);
+    })
       //  console.log("OFF");
-      }else{
-        axios.put('device/PIRD-SMARTMETERLAB-1/command', {
-          value: "ON"
-      }).then(response =>{
-        console.log("Exito");
-      })
-      .catch((err)=>{
-        console.log("Error");
-      })
-    //  console.log("ON");
-    }
+
 }
 
 
