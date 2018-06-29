@@ -12,6 +12,7 @@ class CuadroInfo extends Component {
       <div className="CuadroInfo">
         <div className="BloqueSup"></div>
         <div className="BloqueInf"></div>
+        <div className="BloqueInf2"></div>
         <div></div>
       </div>
     );
