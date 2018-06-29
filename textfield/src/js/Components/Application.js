@@ -5,7 +5,6 @@ import { Redirect } from "react-router-dom";
 import './../../css/App.css'
 import BotonControl from './BotonControl.js';
 import BarraLateral from './BarraLateral.js';
-import BarraSuperior from './BarraSuperior.js';
 import InfoMediciones from './InfoMediciones.js';
 class Application extends Component {
 
@@ -55,6 +54,7 @@ function_logout(){
 
             <div>
               <BotonControl></BotonControl>
+
             </div>
           </div>
 

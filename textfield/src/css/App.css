@@ -558,3 +558,9 @@ outline: none;
 .element{
   color: white;
 }
+
+.CuadroInfo {
+  width: 40%;
+  height: 20%;
+  background: black;
+}

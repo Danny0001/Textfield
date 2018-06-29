@@ -6,13 +6,14 @@ import './../../css/App.css'
 import BotonControl from './BotonControl.js';
 
 
-class BarraSuperior extends Component {
+class CuadroInfo extends Component {
   render() {
     return (
-      <div className="barraSuperior">
+      <div className="CuadroInfo">
+        
       </div>
     );
   }
 }
 
-export default BarraSuperior;
+export default CuadroInfo;
