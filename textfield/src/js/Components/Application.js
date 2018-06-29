@@ -54,7 +54,6 @@ function_logout(){
 
             <div>
               <BotonControl></BotonControl>
-
             </div>
           </div>
 

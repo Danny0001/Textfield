@@ -10,7 +10,9 @@ class CuadroInfo extends Component {
   render() {
     return (
       <div className="CuadroInfo">
-        
+        <div className="BloqueSup"></div>
+        <div className="BloqueInf"></div>
+        <div></div>
       </div>
     );
   }
