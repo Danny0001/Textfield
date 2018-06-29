@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './../../css/App.css'
 class BotonControl extends Component {
   constructor(props)
@@ -16,9 +17,33 @@ class BotonControl extends Component {
     }))
   }*/
 
-  toggle() {
-      this.setState({estado: !this.state.estado});
+    cambioState(estado){
+    this.setState({estado: !this.state.estado});
+
+  //  console.log(this.state.estado);
+    var est= this.state.estado;
+      if(est){
+        axios.put('device/PIRD-SMARTMETERLAB-1/command', {
+          value: "OFF"
+        }).then(response =>{
+          console.log("Exito");
+        })
+        .catch((err)=>{
+          console.log("Error");
+        })
+      //  console.log("OFF");
+      }else{
+        axios.put('device/PIRD-SMARTMETERLAB-1/command', {
+          value: "ON"
+      }).then(response =>{
+        console.log("Exito");
+      })
+      .catch((err)=>{
+        console.log("Error");
+      })
+    //  console.log("ON");
     }
+}
 
 
   render() {
@@ -29,7 +54,7 @@ class BotonControl extends Component {
     return (
       <div>
           <div id="buttonCont">
-            <button className={botonAct.join(' ')} onClick={this.toggle.bind(this)}>{this.state.estado ? 'ON' : 'OFF'}</button>
+            <button className={botonAct.join(' ')} onClick={this.cambioState.bind(this)}>{this.state.estado ? 'ON' : 'OFF'}</button>
           </div>
       </div>
     );
