@@ -9,7 +9,14 @@ class CuadroDispositivo extends Component {
         <div className="imagedispoitivo">
           <BotonControl></BotonControl>
         </div>
-        <div className="infodisp"></div>
+        <div className="infodisp">
+          <div>
+            Nombre del dispositivo
+          </div>
+          <div>
+            Estado:
+          </div>
+        </div>
       </div>
     );
   }
