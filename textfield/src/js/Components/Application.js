@@ -7,6 +7,8 @@ import BarraLateral from './BarraLateral.js';
 import BarraMenu from './BarraMenu.js';
 import InfoMediciones from './InfoMediciones.js';
 import ListadoDispositivos from './ListadoDispositivos.js';
+import { Icon, Intent } from "@blueprintjs/core";
+import { IconNames } from "@blueprintjs/icons";
 class Application extends Component {
 
 constructor(props)

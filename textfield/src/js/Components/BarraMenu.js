@@ -8,9 +8,9 @@ class BarraMenu extends Component {
   render() {
     return (
       <div className="BarraMenu">
-        <button title="Agregar Dispositivo" type="button" class="pt-button pt-intent-success">
+        <button title="Agregar Dispositivo" type="button" class="pt-button pt-intent-success .buttonadd  ">
           Add
-          <span class="pt-icon-standard pt-icon-add pt-align-right"></span>
+          <span class=" pt-icon-standard pt-icon-add pt-align-right "></span>
         </button>
       </div>
     );
