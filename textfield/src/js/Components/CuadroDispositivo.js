@@ -5,6 +5,8 @@ class CuadroDispositivo extends Component {
   render() {
     return (
       <div className="CuadroDispositivo">
+        <div className="imagedispoitivo"></div>
+        <div className="infodisp"></div>
       </div>
     );
   }

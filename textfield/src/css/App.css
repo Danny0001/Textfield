@@ -612,6 +612,11 @@ outline: none;
   background-repeat: no-repeat;
   background-position: center;
   margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 
@@ -623,4 +628,13 @@ outline: none;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+.imagedispoitivo{
+  width:30%;
+  height:100%;
+}
+.infodisp{
+  width: 70%;
+  height: 100%;
+
 }
