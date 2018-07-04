@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { Button, Intent, Spinner } from "@blueprintjs/core";
 import registerServiceWorker from './registerServiceWorker';
 /*
 import { express } from './config/config'
