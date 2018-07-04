@@ -428,7 +428,10 @@ outline: none;
   left: 50%;
   top: 50%;
   margin-left: 10%;
-  margin-top: 30%;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .botonapp {
