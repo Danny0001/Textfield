@@ -612,8 +612,9 @@ outline: none;
   background-repeat: no-repeat;
   background-position: center;
   margin: 10px;
+  box-shadow: 0 5px 50px rgba(76, 81, 101, 0.36);
+  border-radius: 20px;
 }
-
 
 .ListadoDispositivos{
   height: 92%;
