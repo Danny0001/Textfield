@@ -427,14 +427,12 @@ outline: none;
 
   left: 50%;
   top: 50%;
-  margin-left: -50px;
-  margin-top: -50px;
-  position: absolute;
+  margin-left: 10%;
+  margin-top: 30%;
 }
 
 .botonapp {
   border: none;
-  //position: absolute;
   width: 90px;
   height: 90px;
   left: 5px;
@@ -446,7 +444,6 @@ outline: none;
   color: #888;
   text-shadow: 0px 1px 0px #fff;
   text-align: center;
-//  padding-top: 28px;
 
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -472,6 +469,8 @@ outline: none;
   -o-transition: all .1s ease-in;
   transition: all .1s ease-in;
 }
+
+
 .botonapp.botonActive {
   left: 10px;
   top: 10px;
