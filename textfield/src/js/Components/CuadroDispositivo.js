@@ -8,7 +8,7 @@ class CuadroDispositivo extends Component {
   render() {
     return (
       <div className="CuadroDispositivo">
-        <div className="imagedispoitivo">
+        <div className="imagedispositivo">
           <BotonControl></BotonControl>
         </div>
         <div className="infodisp">
