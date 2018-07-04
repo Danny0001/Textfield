@@ -10,7 +10,7 @@ class CuadroDispositivo extends Component {
           <BotonControl></BotonControl>
         </div>
         <div className="infodisp">
-          <div>
+          <div className="Nombredisp">
             Nombre del dispositivo
           </div>
           <div>

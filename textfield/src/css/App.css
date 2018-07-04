@@ -642,3 +642,15 @@ outline: none;
   width: 70%;
   height: 100%;
 }
+
+div .Nombredisp{
+  margin-top: 10%;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.8;
+  color: #8E8989;
+  text-transform: uppercase;
+  font-family:Lucida Console;
+  //text-shadow: 4px 4px 5px #16a085;
+  text-shadow: 1px 1px 1px #eee, 2px 2px 6px #999;
+}
