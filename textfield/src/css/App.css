@@ -642,7 +642,7 @@ outline: none;
   width: 70%;
   height: 100%;
 }
-<<<<<<< HEAD
+
 .statedisp{
   display: flex;
   flex-wrap: nowrap;
@@ -651,7 +651,7 @@ outline: none;
 .circlestate {
   margin-top: 10px;
   margin-left: 5px;
-=======
+}
 
 div .Nombredisp{
   margin-top: 10%;
@@ -663,5 +663,4 @@ div .Nombredisp{
   font-family:Lucida Console;
   //text-shadow: 4px 4px 5px #16a085;
   text-shadow: 1px 1px 1px #eee, 2px 2px 6px #999;
->>>>>>> 75b1f3a92b71568963f2e14933da63e180caeed1
 }
