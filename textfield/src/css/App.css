@@ -643,3 +643,12 @@ outline: none;
   width: 70%;
   height: 100%;
 }
+.statedisp{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.circlestate {
+  margin-top: 10px;
+  margin-left: 5px;
+}
