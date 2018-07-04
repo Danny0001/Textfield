@@ -531,7 +531,9 @@ outline: none;
 */
 
 .barraSuperior{
-  background-image: url("imagenes/fondo2.jpg");
+  background-image: url("imagenes/back3.png");
+  background-size: cover;
+  background-position: 0 50%;
   width: 75%;
   height: 8%;
   display: flex;
