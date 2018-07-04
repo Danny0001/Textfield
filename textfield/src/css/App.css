@@ -603,3 +603,24 @@ outline: none;
   width: 50%;
   height: 65%;
 }
+
+.CuadroDispositivo{
+  width: 40%;
+  height: 20%;
+  background-image: url("imagenes/Back1.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px;
+}
+
+
+.ListadoDispositivos{
+  height: 92%;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

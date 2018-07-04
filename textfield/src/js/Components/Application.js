@@ -3,9 +3,9 @@ import axios from 'axios';
 import Boton from './Boton.js';
 import { Redirect } from "react-router-dom";
 import './../../css/App.css'
-import BotonControl from './BotonControl.js';
 import BarraLateral from './BarraLateral.js';
 import InfoMediciones from './InfoMediciones.js';
+import ListadoDispositivos from './ListadoDispositivos.js';
 class Application extends Component {
 
 constructor(props)
@@ -50,11 +50,8 @@ function_logout(){
             <div className="barraSuperior">
               <button id="button" onClick={this.function_logout}>Cerrar sesión</button>
             </div>
-            <InfoMediciones></InfoMediciones>
-
-            <div>
-              <BotonControl></BotonControl>
-            </div>
+            {/*<InfoMediciones></InfoMediciones>*/}
+            <ListadoDispositivos></ListadoDispositivos>
           </div>
 
       )}
