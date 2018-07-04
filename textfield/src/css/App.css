@@ -434,7 +434,7 @@ outline: none;
 
 .botonapp {
   border: none;
-  position: absolute;
+  //position: absolute;
   width: 90px;
   height: 90px;
   left: 5px;
