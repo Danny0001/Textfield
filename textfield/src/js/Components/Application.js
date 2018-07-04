@@ -4,6 +4,7 @@ import Boton from './Boton.js';
 import { Redirect } from "react-router-dom";
 import './../../css/App.css'
 import BarraLateral from './BarraLateral.js';
+import BarraMenu from './BarraMenu.js';
 import InfoMediciones from './InfoMediciones.js';
 import ListadoDispositivos from './ListadoDispositivos.js';
 class Application extends Component {
@@ -53,7 +54,6 @@ function_logout(){
             {/*<InfoMediciones></InfoMediciones>*/}
             <ListadoDispositivos></ListadoDispositivos>
           </div>
-
       )}
       </div>
     );
