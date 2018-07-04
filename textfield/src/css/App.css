@@ -427,9 +427,12 @@ outline: none;
 
   left: 50%;
   top: 50%;
-  margin-left: -50px;
-  margin-top: -50px;
-  position: absolute;
+  //margin-left: -50px;
+  //margin-top: -50px;
+  //position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .botonapp {
@@ -471,6 +474,10 @@ outline: none;
   -ms-transition: all .1s ease-in;
   -o-transition: all .1s ease-in;
   transition: all .1s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 .botonapp.botonActive {
   left: 10px;
