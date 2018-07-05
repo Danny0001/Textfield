@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import './../../css/App.css'
 import BarraLateral from './BarraLateral.js';
 import BarraMenu from './BarraMenu.js';
+import CuadroCrearDisp from './CuadroCrearDisp.js';
 import InfoMediciones from './InfoMediciones.js';
 import ListadoDispositivos from './ListadoDispositivos.js';
 import { Icon, Intent } from "@blueprintjs/core";
@@ -55,6 +56,7 @@ function_logout(){
             </div>
             {/*<InfoMediciones></InfoMediciones>*/}
             <ListadoDispositivos></ListadoDispositivos>
+            <CuadroCrearDisp></CuadroCrearDisp>
           </div>
       )}
       </div>

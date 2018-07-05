@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CuadroDispositivo from './CuadroDispositivo.js';
 import './../../css/App.css'
 import BarraMenu from './BarraMenu.js';
+import CuadroCrearDisp from './CuadroCrearDisp.js';
 class ListadoDispositivos extends Component {
 
   render() {
@@ -10,6 +11,7 @@ class ListadoDispositivos extends Component {
         <BarraMenu></BarraMenu>
         <CuadroDispositivo></CuadroDispositivo>
         <CuadroDispositivo></CuadroDispositivo>
+        
       </div>
     );
   }

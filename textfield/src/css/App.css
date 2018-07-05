@@ -683,17 +683,33 @@ div .Nombredisp{
   margin: none;
 }
 
-.migration-form {
-    width: 50%;
-    min-height: 250px;
-    background: #FFF;
-    position: relative;
-    left: 25%;
-    top: 5%;
-    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.5);
-}
+
+.CuadroCrearDisp{
+  box-shadow: 0 5px 50px rgba(76, 81, 101, 0.36);
+  margin-top: 15%;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 30%;
+  color: rgb(107, 108, 116);
+  font-size: 150%;
 /*
-.buttonadd:hover {
-  transform: scale(1.3);
-  transition: 1s;
-}*/
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #FF0000;
+    margin-top: 20px;
+
+     animation:signup-response 0.5s 1;
+    -webkit-animation:signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+
+    animation-delay:2s;
+    -webkit-animation-delay:1s;
+    -webkit-animation-fill-mode: forwards;*/
+
+}
+
+.labeldisp{
+  width: 50%;
+}
