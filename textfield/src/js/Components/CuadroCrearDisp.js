@@ -32,16 +32,17 @@ class CuadroCrearDisp extends Component {
   render() {
     return (
       <div className="CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive" >
-        <label class="pt-label">
-           Dispositivo
-          <input class="labeldisp pt-input" type="text" placeholder="Nombre" dir="auto" />
+        <label class="titulodisp">Agregar Dispositivo</label>
+        <label class="pt-label labeldisp">
+           Identificador de Dispositivo
+          <input class= "pt-input inputdisp" type="text" placeholder="Ingresar Identificador de Dispositivo" dir="auto" />
         </label>
         <label class="pt-control pt-switch .pt-large">
           <input type="checkbox"  />
           <span class="pt-control-indicator"></span>
           Estado
         </label>
-        <button type="button" class="pt-button" >Crear Nuevo Dispositivo</button>
+        <button type="button" class="pt-button buttonagreg" >Agregar</button>
     </div>
     );
   }

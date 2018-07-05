@@ -689,9 +689,9 @@ div .Nombredisp{
   margin-top: 15%;
   margin-left: 100px;
   margin-right: 100px;
-  width: 30%;
+  width: 50%;
   color: rgb(107, 108, 116);
-  font-size: 150%;
+  font-size: 100%;
 /*
     width: 50%;
     margin-left: auto;
@@ -712,4 +712,19 @@ div .Nombredisp{
 
 .labeldisp{
   width: 50%;
+  margin: 20px;
+  justify-content: center;
+}
+
+.titulodisp{
+  font-size: 150%;
+  margin: 20%;
+}
+
+.inputdisp{
+  width: 80%;
+}
+.buttonagreg {
+  outline:0px;
+  margin-top: 10px;
 }
