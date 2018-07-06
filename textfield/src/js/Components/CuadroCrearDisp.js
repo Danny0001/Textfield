@@ -29,9 +29,29 @@ class CuadroCrearDisp extends Component {
   }
 */
 
+openTools() {
+var btn = document.getElementById('btnTools');
+console.log("hola");
+var className = btn.className;
+var res = '';
+
+if (className == "pt-button pt-intent-success .buttonadd") {
+    className = "pt-button pt-intent-success .buttonadd open";
+    document.getElementById('migration-form').className = "CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer show active";
+}
+
+else {
+    className = "pt-button pt-intent-success .buttonadd";
+    document.getElementById('migration-form').className = "CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer";
+}
+
+btn.className = className;
+}
+
   render() {
     return (
-      <div className="CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive" >
+      <div id="migration-form" className="CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer" >
+        <label onClick={this.openTools} className="close">x</label>
         <label class="titulodisp">Agregar Dispositivo</label>
         <label class="pt-label labeldisp">
            Identificador de Dispositivo
