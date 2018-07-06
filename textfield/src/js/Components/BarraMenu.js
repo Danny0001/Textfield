@@ -46,7 +46,7 @@ class BarraMenu extends Component {
   render() {
     return (
       <div className="BarraMenu">
-        <button id="btnTools" onClick={this.openTools}/*onClick={this.OpenAdd}*/ title="Agregar Dispositivo" type="button" class="pt-button pt-intent-success .buttonadd">
+        <button id="btnTools" onClick={this.openTools}/*onClick={this.OpenAdd}*/ title="Agregar Dispositivo" type="button" class="pt-button pt-intent-success buttonadd">
           Add
           <span class=" pt-icon-standard pt-icon-add pt-align-right"></span>
         </button>
