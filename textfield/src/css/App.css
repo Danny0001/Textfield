@@ -693,3 +693,11 @@ div .Nombredisp{
     text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.75);
     cursor: pointer;
 }
+.perfil{
+  height: 92%;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

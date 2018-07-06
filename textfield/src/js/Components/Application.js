@@ -10,6 +10,7 @@ import InfoMediciones from './InfoMediciones.js';
 import ListadoDispositivos from './ListadoDispositivos.js';
 import { Icon, Intent } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
+import Perfil from './Perfil.js';
 class Application extends Component {
 
 constructor(props)
@@ -56,6 +57,7 @@ function_logout(){
             </div>
             {/*<InfoMediciones></InfoMediciones>*/}
             <ListadoDispositivos></ListadoDispositivos>
+            {/*<Perfil></Perfil>*/}
             <CuadroCrearDisp></CuadroCrearDisp>
           </div>
       )}
