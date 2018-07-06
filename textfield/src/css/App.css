@@ -376,6 +376,8 @@ outline: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .application{
@@ -540,7 +542,6 @@ outline: none;
   display: flex;
   align-items:center;
   justify-content: flex-end;
-
 }
 
 .InfoMediciones{
