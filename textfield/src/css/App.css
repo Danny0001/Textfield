@@ -639,6 +639,7 @@ outline: none;
     flex-wrap: nowrap;
     flex-direction: row;
     margin: 30px;
+    border-radius: 50px;
 }
 
 .ListadoDispositivos{
