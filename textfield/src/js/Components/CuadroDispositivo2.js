@@ -7,6 +7,13 @@ import { Classes, H5, Label, Slider, Switch } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 
 class CuadroDispositivo2 extends Component {
+  constructor(props)
+  {
+    super(props);
+    this.state={
+    IdentificadorDisp:" ",
+  }
+}
 
   render() {
     return (

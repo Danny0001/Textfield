@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import createRef from 'create-react-ref';
+import PropTypes from 'prop-types';
 import './../../css/App.css'
 import { Icon, Intent } from "@blueprintjs/core";
 import { Button, Card, Elevation } from "@blueprintjs/core";
@@ -6,24 +8,21 @@ import { Classes, H5, Label, Slider, Switch } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 
 class CuadroCrearDisp extends React.Component {
-/*
+
   constructor(props)
   {
     super(props);
-    this.IdentificadorDisp = React.createRef();
+    this.state={
+    IdentificadorDisp:" ",
   }
+  this.handleChange = this.handleChange.bind(this);
+  this.crearDispositivo = this.crearDispositivo.bind(this);
+}
 
 
-  handleChange(event){
-    this.setState({[event.target.name]: event.target.value});
-  }
-
-  handleSubmit(event) {
-      event.preventDefault()
-
-      const { email, password } = this.state
-  }
-*/
+handleChange(event) {
+  this.setState({IdentificadorDisp: event.target.value});
+}
 
 openTools() {
 var btn = document.getElementById('btnTools');
@@ -44,23 +43,19 @@ else {
 btn.className = className;
 }
 
-
-
-
-
-
-crearDispositivo(event){
-    event.preventDefault();
+crearDispositivo(e){
+    e.preventDefault()
+    const { IdentificadorDisp } = this.state
     //get the fruit object name from the form
-    var Identificador = this.refs.IdentificadorDisp;
     //if we have a value
     //call the addFruit method of the App component
     //to change the state of the fruit list by adding an new item
-    if(typeof Identificador === 'string' && Identificador.length > 0) {
-    //  this.props.addFruit(Identificador);
+    if(typeof IdentificadorDisp === 'string' && IdentificadorDisp.length > 0) {
+    //  this.props.addDispositivo(IdentificadorDisp);
+
+    console.log(IdentificadorDisp);
     }
-    console.log("Creado");
-   }
+  }
 
   render() {
     return (
@@ -69,13 +64,14 @@ crearDispositivo(event){
         <label class="titulodisp">Agregar Dispositivo</label>
         <label class="pt-label labeldisp">
            Identificador de Dispositivo
-          <input class= "pt-input inputdisp" type="text" placeholder="Ingresar Identificador de Dispositivo" dir="auto" ref={this.IdentificadorDisp} />
+          <input class= "pt-input inputdisp" type="text" value={this.state.IdentificadorDisp} onChange={this.handleChange} placeholder="Ingresar Identificador de Dispositivo" dir="auto"/>
         </label>
+        {/*
         <label class="pt-control pt-switch .pt-large">
           <input type="checkbox"  />
           <span class="pt-control-indicator"></span>
           Estado
-        </label>
+        </label>*/}
         <button type="submit" class="pt-button buttonagreg" >Agregar</button>
     </form>
     );
