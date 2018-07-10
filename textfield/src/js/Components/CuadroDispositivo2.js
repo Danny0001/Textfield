@@ -5,15 +5,17 @@ import { Icon, Intent } from "@blueprintjs/core";
 import { Button, Card, Elevation } from "@blueprintjs/core";
 import { Classes, H5, Label, Slider, Switch } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
+import ListadoDispositivos from './ListadoDispositivos.js';
 
 class CuadroDispositivo2 extends Component {
-  constructor(props)
+
+/*  constructor(props)
   {
     super(props);
     this.state={
-    IdentificadorDisp:" ",
+  //  name:"",
   }
-}
+}*/
 
   render() {
     return (
@@ -22,8 +24,8 @@ class CuadroDispositivo2 extends Component {
           <BotonControl></BotonControl>
         </div>
         <div className="infodisp">
-          <div className="Nombredisp">
-            Nombre del dispositivo
+          <div className="Nombredisp" >
+            {props.Device}
           </div>
           <div className="statedisp">
             Estado:

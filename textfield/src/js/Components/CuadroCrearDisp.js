@@ -13,6 +13,7 @@ class CuadroCrearDisp extends React.Component {
   {
     super(props);
     this.state={
+    list:[],
     IdentificadorDisp:" ",
   }
   this.handleChange = this.handleChange.bind(this);
@@ -42,6 +43,24 @@ else {
 
 btn.className = className;
 }
+/*
+handleSubmit(e) {
+   e.preventDefault();
+   if (!this.state.IdentificadorDisp.length) {
+     return;
+   }
+   const newItem = {
+     text: this.state.IdentificadorDisp,
+     id: Date.now()
+   };
+   this.setState(prevState => ({
+     items: prevState.items.concat(newItem),
+     text: ''
+   }));
+ }
+}
+*/
+
 
 crearDispositivo(e){
     e.preventDefault()
