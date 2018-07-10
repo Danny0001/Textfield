@@ -30,13 +30,13 @@ class BarraMenu extends Component {
     var className = btn.className;
     var res = '';
 
-    if (className == "pt-button pt-intent-success .buttonadd") {
-        className = "pt-button pt-intent-success .buttonadd ";
+    if (className == "pt-button pt-intent-success buttonadd") {
+        className = "pt-button pt-intent-success buttonadd ";
         document.getElementById('migration-form').className = "CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer show active";
     }
 
     else {
-        className = "pt-button pt-intent-success .buttonadd";
+        className = "pt-button pt-intent-success buttonadd";
         document.getElementById('migration-form').className = "CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer";
     }
 
