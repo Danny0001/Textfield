@@ -60,7 +60,7 @@ class BotonControl extends Component {
 
   render() {
     let botonAct = ["botonapp"];
-    if(this.state.estado) {
+    if(this.props.estado) {
       botonAct.push('botonActive');
     }
     console.log("cambioooooooooooooo?", this.props.estado);
