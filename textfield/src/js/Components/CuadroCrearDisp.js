@@ -85,12 +85,11 @@ crearDispositivo(e){
            Identificador de Dispositivo
           <input class= "pt-input inputdisp" type="text" value={this.state.IdentificadorDisp} onChange={this.handleChange} placeholder="Ingresar Identificador de Dispositivo" dir="auto"/>
         </label>
-        {/*
         <label class="pt-control pt-switch .pt-large">
-          <input type="checkbox"  />
+          <input type="checkbox"/>
           <span class="pt-control-indicator"></span>
           Estado
-        </label>*/}
+        </label>
         <button type="submit" class="pt-button buttonagreg" >Agregar</button>
     </form>
     );

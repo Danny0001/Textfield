@@ -1,23 +1,41 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import './../../css/App.css'
+import ListadoDispositivos from './ListadoDispositivos.js';
+
+
 class BotonControl extends Component {
+
+
   constructor(props)
   {
     super(props);
     this.state = {
-      estado:false
+      estado: false,
     };
-    //this.controlButton= this.controlButton.bind(this);
+    this.cambioState= this.cambioState.bind(this);
   }
+
   /*controlButton(){
     this.setState(prevState=>({
       estado:
       !prevState.estado
     }))
   }*/
+/*
+  componentWillMount(){
+    this.setState({estado: !this.state.estado});
+    console.log("componentWillMount butooooooooon", this.state.estado)
+  }
 
-    cambioState(estado){
+  componentDidMount(){
+    this.setState({estado: !this.state.estado});
+  }
+*/
+ cambioState(estado){
+  //console.log(this.state.estado);
     this.setState({estado: !this.state.estado});
 
   //  console.log(this.state.estado);
@@ -45,10 +63,11 @@ class BotonControl extends Component {
     if(this.state.estado) {
       botonAct.push('botonActive');
     }
+    console.log("cambioooooooooooooo?", this.props.estado);
     return (
       <div>
           <div id="buttonCont">
-            <button className={botonAct.join(' ')} onClick={this.cambioState.bind(this)}>{this.state.estado ? 'ON' : 'OFF'}</button>
+            <button estado={this.state.estado} className={botonAct.join(' ')} onClick={this.cambioState.bind(this)}>{this.state.estado ? 'ON' : 'OFF'}</button>
           </div>
       </div>
     );

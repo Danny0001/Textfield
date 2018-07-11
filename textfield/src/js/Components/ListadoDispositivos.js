@@ -11,15 +11,18 @@ import { IconNames } from "@blueprintjs/icons";
 import _ from "lodash";
 import BotonControl from './BotonControl.js';
 
+
 class ListadoDispositivos extends Component {
+
   constructor(props)
   {
     super(props);
     this.state={
-    Dispositivo:[{name:"Compu", status:false, power:false }, {name:"Compu 2", status:true, power:false}, {name:"Compu3", status:true, power:true}, {name:"Compu4", status:false, power:true }], //lista Dispositivo
+    Dispositivo:[{name:"Compu", status:false, power:true }, {name:"Compu 2", status:true, power:false}, {name:"Compu3", status:true, power:true}, {name:"Compu4", status:false, power:true }], //lista Dispositivo
   }
-}
 
+}
+/*
 CambioButton(){
   const Device = this.state.Dispositivo;
   let botonAct = ["botonapp"]
@@ -27,13 +30,22 @@ CambioButton(){
       botonAct.push('botonActive');
     }
 }
+*/
+componentWillMount(power) {
+     //console.log("componentWillMount listaaaaaaaaaaaaaaa", power)
+
+  }
 
 ListDevice(){
+  let botonAct = ["botonapp"];
+
   const renderList = this.state.Dispositivo.map((Device) =>{ //props
+    //const Dpower =this.state.Device.power
     return        <div className="CuadroDispositivo2 pt-card .pt-elevation-4 .pt-interactive">
+
             <div className="imagedispositivo">
-              <BotonControl></BotonControl>
-              {this.CambioButton()}
+              <BotonControl estado={Device.power}></BotonControl>
+
             </div>
             <div className="infodisp">
               <div className="Nombredisp" >
@@ -55,8 +67,8 @@ ListDevice(){
 
 
 
-
   render() {
+    const power= this.props;
     return (
       <div className="ListadoDispositivos">
         <BarraMenu></BarraMenu>
