@@ -16,9 +16,10 @@ class ListadoDispositivos extends Component {
   {
     super(props);
     this.state={
-    Dispositivo:[{name:"Compu", status:"online", power:"ON" }, {name:"Compu 2", status:"online", power:"ON" }, {name:"Compu3", status:"online", power:"ON" }, {name:"Compu4", status:"online", power:"ON" }], //lista Dispositivo
+    Dispositivo:[{name:"Compu", status:"online", power:"OFF" }, {name:"Compu 2", status:"online", power:"ON" }, {name:"Compu3", status:"online", power:"ON" }, {name:"Compu4", status:"online", power:"ON" }], //lista Dispositivo
   }
 }
+
 
 ListDevice(){
   const renderList = this.state.Dispositivo.map((Device) =>{ //props
@@ -42,6 +43,13 @@ ListDevice(){
 
   })
   return renderList;
+}
+
+CambioButton(){
+  let botonAct = ["botonapp"]
+    if(Device.power === "ON") {
+      botonAct.push('botonActive');
+    }
 }
 
 
