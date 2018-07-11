@@ -8,7 +8,8 @@ import { Icon, Intent } from "@blueprintjs/core";
 import { Button, Card, Elevation } from "@blueprintjs/core";
 import { Classes, H5, Label, Slider, Switch } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
-import _ from "lodash"
+import _ from "lodash";
+import BotonControl from './BotonControl.js';
 
 class ListadoDispositivos extends Component {
   constructor(props)
@@ -21,7 +22,22 @@ class ListadoDispositivos extends Component {
 
 ListDevice(){
   const renderList = this.state.Dispositivo.map((Device) =>{ //props
-    return  <CuadroDispositivo2 value="this.props.device"></CuadroDispositivo2>;
+    return        <div className="CuadroDispositivo2 pt-card .pt-elevation-4 .pt-interactive">
+            <div className="imagedispositivo">
+              <BotonControl></BotonControl>
+            </div>
+            <div className="infodisp">
+              <div className="Nombredisp" >
+                {Device.name}
+              </div>
+              <div className="statedisp">
+                Estado:
+                <div className="circlestate">
+                  <Icon icon="full-circle" iconSize={10}/>
+                </div>
+              </div>
+            </div>
+          </div>;
     console.log(Device);
 
   })

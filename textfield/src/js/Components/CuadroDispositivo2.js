@@ -25,7 +25,7 @@ class CuadroDispositivo2 extends Component {
         </div>
         <div className="infodisp">
           <div className="Nombredisp" >
-            {props.Device}
+            Nombre
           </div>
           <div className="statedisp">
             Estado:
