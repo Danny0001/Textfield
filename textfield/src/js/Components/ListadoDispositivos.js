@@ -16,16 +16,24 @@ class ListadoDispositivos extends Component {
   {
     super(props);
     this.state={
-    Dispositivo:[{name:"Compu", status:false, power:"ON" }, {name:"Compu 2", status:true, power:"ON" }, {name:"Compu3", status:true, power:"ON" }, {name:"Compu4", status:false, power:"ON" }], //lista Dispositivo
+    Dispositivo:[{name:"Compu", status:false, power:false }, {name:"Compu 2", status:true, power:false}, {name:"Compu3", status:true, power:true}, {name:"Compu4", status:false, power:true }], //lista Dispositivo
   }
 }
 
+CambioButton(){
+  const Device = this.state.Dispositivo;
+  let botonAct = ["botonapp"]
+    if(Device.power) {
+      botonAct.push('botonActive');
+    }
+}
 
 ListDevice(){
   const renderList = this.state.Dispositivo.map((Device) =>{ //props
     return        <div className="CuadroDispositivo2 pt-card .pt-elevation-4 .pt-interactive">
             <div className="imagedispositivo">
               <BotonControl></BotonControl>
+              {this.CambioButton()}
             </div>
             <div className="infodisp">
               <div className="Nombredisp" >
@@ -45,12 +53,7 @@ ListDevice(){
   return renderList;
 }
 
-CambioButton(){
-  let botonAct = ["botonapp"]
-    if(Device.power === "ON") {
-      botonAct.push('botonActive');
-    }
-}
+
 
 
   render() {
