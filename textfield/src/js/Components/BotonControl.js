@@ -27,17 +27,19 @@ class BotonControl extends Component {
 /*
   componentWillMount(){
     this.setState({estado: !this.state.estado});
-    console.log("componentWillMount butooooooooon", this.state.estado)
-  }
-
-  componentDidMount(){
-    this.setState({estado: !this.state.estado});
   }
 */
+
+  componentDidMount(){
+      this.setState({estado: this.props.estado});
+      console.log("componentDidMount", this.state.estado );
+  }
+
  cambioState(estado){
   //console.log(this.state.estado);
-    this.setState({estado: !this.state.estado});
-
+  //  this.setState({estado: !this.state.estado});
+this.setState({estado: !this.state.estado});
+//console.log(this.state.estado);
   //  console.log(this.state.estado);
     var est= this.state.estado;
 
@@ -59,15 +61,17 @@ class BotonControl extends Component {
 
 
   render() {
+
     let botonAct = ["botonapp"];
-    if(this.props.estado) {
+
+    if(this.state.estado===true) {
       botonAct.push('botonActive');
     }
-    console.log("cambioooooooooooooo?", this.props.estado);
+    console.log(this.state.estado);
     return (
       <div>
           <div id="buttonCont">
-            <button estado={this.state.estado} className={botonAct.join(' ')} onClick={this.cambioState.bind(this)}>{this.state.estado ? 'ON' : 'OFF'}</button>
+            <button estado={this.state.estado} className={botonAct.join(" ")} onClick={this.cambioState.bind(this)}>{this.state.estado ? 'ON' : 'OFF'}</button>
           </div>
       </div>
     );
