@@ -16,7 +16,7 @@ class ListadoDispositivos extends Component {
   {
     super(props);
     this.state={
-    Dispositivo:[{name:"Compu", status:"online", power:"OFF" }, {name:"Compu 2", status:"online", power:"ON" }, {name:"Compu3", status:"online", power:"ON" }, {name:"Compu4", status:"online", power:"ON" }], //lista Dispositivo
+    Dispositivo:[{name:"Compu", status:false, power:"ON" }, {name:"Compu 2", status:true, power:"ON" }, {name:"Compu3", status:true, power:"ON" }, {name:"Compu4", status:false, power:"ON" }], //lista Dispositivo
   }
 }
 
@@ -34,7 +34,7 @@ ListDevice(){
               <div className="statedisp">
                 Estado:
                 <div className="circlestate">
-                  <Icon icon="full-circle" iconSize={10}/>
+                  <Icon icon="full-circle" iconSize={10} className={( Device.status ? "GreenColor":"RedColor")}/>
                 </div>
               </div>
             </div>

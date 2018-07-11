@@ -701,3 +701,10 @@ div .Nombredisp{
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.GreenColor{
+  color:green;
+}
+.RedColor{
+  color:red;
+}
