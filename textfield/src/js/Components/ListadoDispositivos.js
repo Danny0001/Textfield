@@ -18,7 +18,7 @@ class ListadoDispositivos extends Component {
   {
     super(props);
     this.state={
-    Dispositivo:[{name:"Compu", status:false, power:true }, {name:"Compu 2", status:true, power:false}, {name:"Compu3", status:true, power:true}, {name:"Compu4", status:false, power:true }], //lista Dispositivo
+    Dispositivo:[{name:"Computer 1", status:false, power:true }, {name:"Computer 2", status:true, power:false}, {name:"Computer 3", status:true, power:true}, {name:"Computer 4", status:false, power:true }], //lista Dispositivo
   }
 
 }
@@ -41,7 +41,7 @@ ListDevice(){
 
   const renderList = this.state.Dispositivo.map((Device) =>{ //props
     //const Dpower =this.state.Device.power
-    return        <div className="CuadroDispositivo2 pt-card .pt-elevation-4 .pt-interactive">
+    return   <div className="CuadroDispositivo2 pt-card pt-interactive pt-elevation-2 ">
 
             <div className="imagedispositivo">
               <BotonControl estado={Device.power}></BotonControl>
@@ -54,7 +54,7 @@ ListDevice(){
               <div className="statedisp">
                 Estado:
                 <div className="circlestate">
-                  <Icon icon="full-circle" iconSize={10} className={( Device.status ? "GreenColor":"RedColor")}/>
+                  <Icon icon="full-circle" iconSize={10} className={( Device.status ? "GreenColor" : "RedColor")}/>
                 </div>
               </div>
             </div>
