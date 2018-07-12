@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Boton from './Boton.js';
 import { Redirect } from "react-router-dom";
 import './../../css/App.css'
 import BarraLateral from './BarraLateral.js';
-import BarraMenu from './BarraMenu.js';
 import CuadroCrearDisp from './CuadroCrearDisp.js';
-import InfoMediciones from './InfoMediciones.js';
 import ListadoDispositivos from './ListadoDispositivos.js';
-import { Icon, Intent } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
-import Perfil from './Perfil.js';
 class Application extends Component {
 
 constructor(props)

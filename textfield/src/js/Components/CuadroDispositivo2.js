@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import BotonControl from './BotonControl.js';
 import './../../css/App.css'
-import { Icon, Intent } from "@blueprintjs/core";
-import { Button, Card, Elevation } from "@blueprintjs/core";
-import { Classes, H5, Label, Slider, Switch } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
-import ListadoDispositivos from './ListadoDispositivos.js';
+import { Icon } from "@blueprintjs/core";
 
 class CuadroDispositivo2 extends Component {
 

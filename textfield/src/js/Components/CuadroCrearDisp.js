@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import createRef from 'create-react-ref';
-import PropTypes from 'prop-types';
 import './../../css/App.css'
-import { Icon, Intent } from "@blueprintjs/core";
-import { Button, Card, Elevation } from "@blueprintjs/core";
-import { Classes, H5, Label, Slider, Switch } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
+
 
 class CuadroCrearDisp extends React.Component {
 

@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
-/*import { reduxForm, Field } from 'redux-form'*/
 import axios from 'axios';
 import isEmpty from 'lodash/isEmpty';
 import emailValidator from 'email-validator';
-//import { ToastContainer, toast } from 'react-toastify';
-//import {NotificationContainer, NotificationManager} from 'react-notifications';
 import { Redirect } from "react-router-dom";
-//import Application from "./Application.js";
-
-//import controllers from '../../../../server/api/user/controllers.js';
 import CampoDeTexto from './CampoDeTexto.js';
-//import LineaInferior from './LineaInferior.js';
 import TextoExplicativo from './TextoExplicativo.js';
-//import prub from './prub.js';
 import Boton from './Boton.js';
 import './../../css/App.css';
 

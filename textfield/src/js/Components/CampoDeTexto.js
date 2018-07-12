@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import LineaInferior from './LineaInferior.js';
 import './../../css/App.css'
 
 class CampoDeTexto extends Component

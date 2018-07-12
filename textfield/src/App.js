@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
-import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
-import CampoDeTexto from './js/Components/CampoDeTexto.js';
-import LineaInferior from './js/Components/LineaInferior.js';
-import TextoExplicativo from './js/Components/TextoExplicativo.js';
-import prub from './js/Components/prub.js';
-import Boton from './js/Components/Boton.js';
 import Login from './js/Components/Login.js';
 import Home from './js/Components/Home.js';
 import Application from './js/Components/Application.js';
 import {BrowserRouter,Route} from 'react-router-dom';
 import './css/App.css';
-import { CookiesProvider } from 'react-cookie';
 
 /*
 const express = require('express')

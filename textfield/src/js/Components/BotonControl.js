@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
-import PropTypes from 'prop-types';
 import './../../css/App.css'
-import ListadoDispositivos from './ListadoDispositivos.js';
 
 
 class BotonControl extends Component {
@@ -41,7 +38,6 @@ class BotonControl extends Component {
 this.setState({estado: !this.state.estado});
 //console.log(this.state.estado);
   //  console.log(this.state.estado);
-    var est= this.state.estado;
 
     axios.put('http://10.108.0.45:3001/api/device/PIRD-SMARTMETERLAB-1/command/POWER', {
       value: "toggle"},

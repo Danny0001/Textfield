@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { Icon, Intent } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
-
 import './../../css/App.css'
 class BarraMenu extends Component {
 /*
@@ -28,9 +25,8 @@ class BarraMenu extends Component {
     var btn = document.getElementById('btnTools');
     console.log("hola");
     var className = btn.className;
-    var res = '';
 
-    if (className == "pt-button pt-intent-success buttonadd") {
+    if (className === "pt-button pt-intent-success buttonadd") {
         className = "pt-button pt-intent-success buttonadd ";
         document.getElementById('migration-form').className = "CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer show active";
     }
