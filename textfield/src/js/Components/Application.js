@@ -5,6 +5,28 @@ import './../../css/App.css'
 import BarraLateral from './BarraLateral.js';
 import CuadroCrearDisp from './CuadroCrearDisp.js';
 import ListadoDispositivos from './ListadoDispositivos.js';
+import LeftNavBar from './LeftNavBar.js';
+import NavBar from './NavBar.js'
+import DropdownProfile from './DropDownProfile.js'
+import {
+  Button, Card, Elevation, Checkbox,Icon,
+    Boundary,
+    Breadcrumb,
+    Classes,
+    H5,
+    IMenuItemProps,
+    Label,
+    Menu,
+    MenuItem,
+    OverflowList,
+    Popover,
+    Position,
+    RadioGroup,
+    Slider,
+} from "@blueprintjs/core";
+import { Example, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
+
+
 class Application extends Component {
 
 constructor(props)
@@ -45,11 +67,14 @@ function_logout(){
           <Redirect to="/login" />
         ) : (
           <div className="application">
-            <BarraLateral></BarraLateral>
-            <div className="barraSuperior">
+            <NavBar></NavBar>
+            <LeftNavBar></LeftNavBar>
+              {/*<LeftNavBar></LeftNavBar>
+          <div className="barraSuperior">
               <button id="button" onClick={this.function_logout}>Cerrar sesión</button>
-            </div>
+            </div>*/}
             {/*<InfoMediciones></InfoMediciones>*/}
+            
             <ListadoDispositivos></ListadoDispositivos>
             {/*<Perfil></Perfil>*/}
             <CuadroCrearDisp></CuadroCrearDisp>

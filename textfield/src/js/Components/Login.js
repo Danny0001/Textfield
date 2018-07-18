@@ -5,8 +5,28 @@ import emailValidator from 'email-validator';
 import { Redirect } from "react-router-dom";
 import CampoDeTexto from './CampoDeTexto.js';
 import TextoExplicativo from './TextoExplicativo.js';
+import NavBar from './NavBar.js';
 import Boton from './Boton.js';
 import './../../css/App.css';
+import DropdownProfile from './DropDownProfile.js'
+import {
+  Button, Card, Elevation, Checkbox,Icon,
+    Boundary,
+    Breadcrumb,
+    Classes,
+    H5,
+    IMenuItemProps,
+    Label,
+    Menu,
+    MenuItem,
+    OverflowList,
+    Popover,
+    Position,
+    RadioGroup,
+    Slider,
+} from "@blueprintjs/core";
+import { Example, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
+
 
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
@@ -207,9 +227,11 @@ async handleSubmit(event) {
     const { errors, redirect,logged } = this.state
     return(
       <div className="App">
+        <NavBar></NavBar>
         {(redirect || logged) ? (
           <Redirect to="/app" />
         ) : (
+
         <form class="navbar-form" id="login" onSubmit={ this.handleSubmit }>
             <img className="logo" src='http://dragene.no/wp-content/uploads/2016/06/default1.jpg'/>
             <TextoExplicativo Texto={['Correo']}/>

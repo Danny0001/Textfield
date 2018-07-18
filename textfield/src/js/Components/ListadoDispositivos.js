@@ -12,7 +12,7 @@ class ListadoDispositivos extends Component {
   {
     super(props);
     this.state={
-    Dispositivo:[{name:"Computer 1", status:false, power:true }, {name:"Computer 2", status:true, power:false}, {name:"Computer 3", status:true, power:true}, {name:"Computer 4", status:false, power:true }], //lista Dispositivo
+    Dispositivo:[{name:"Computer 1", status:false, power:true }, {name:"Computer 2", status:true, power:false}, {name:"Computer 3", status:true, power:true}, {name:"Computer 4", status:false, power:true }, {name:"Computer 1", status:false, power:true }, {name:"Computer 2", status:true, power:false}, {name:"Computer 3", status:true, power:true}, {name:"Computer 4", status:false, power:true }],
   }
 
 }
