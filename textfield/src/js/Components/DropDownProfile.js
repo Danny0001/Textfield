@@ -1,23 +1,13 @@
 import * as React from "react";
 
-import { Button, MenuDivider } from "@blueprintjs/core";
-import { Card, Elevation, Checkbox,Icon } from "@blueprintjs/core";
+import { MenuDivider } from "@blueprintjs/core";
 import {
-    Boundary,
-    Breadcrumb,
-    Classes,
-    H5,
-    IMenuItemProps,
-    Label,
     Menu,
     MenuItem,
-    OverflowList,
     Popover,
     Position,
-    RadioGroup,
-    Slider,
 } from "@blueprintjs/core";
-import { Example, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
+import { Example, IExampleProps } from "@blueprintjs/docs-theme";
 
  class DropdownProfile extends React.PureComponent<IExampleProps> {
      render() {

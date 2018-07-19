@@ -1,32 +1,47 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './../../css/App.css'
-import { Button, Card, Elevation, Checkbox, Icon } from "@blueprintjs/core";
-import {
-    Boundary,
-    Breadcrumb,
-    Classes,
-    H5,
-    IMenuItemProps,
-    Label,
-    Menu,
-    MenuItem,
-    OverflowList,
-    Popover,
-    Position,
-    RadioGroup,
-    Slider,
-} from "@blueprintjs/core";
-import { Example, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
+import { Icon } from "@blueprintjs/core";
 
 class LeftNavBar extends Component {
 
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      redirect:false,
+      logged:false,
+    };
+    this.function_logout = this.function_logout.bind(this);
+  }
+  componentDidMount() {
+  if (document.cookie) {
+    this.setState({ logged:true })
+  }
+  }
+  function_logout(){
+    axios({
+        method: "POST",
+        url: "http://localhost:8001/api/user/logout",
+      })
+    .then(async response => {
+      this.setState({
+        logged:false,redirect:true
+      });
+      console.log("sesion cerrada correctamente")
+    })
+    .catch((err) => {
+        console.log("error al cerrar sesion")
+      })
+  }
+
   render() {
     return (
-      <div class="main-menuBox">
-      <nav class="main-menu">
+      <div className="main-menuBox">
+      <nav className="main-menu">
             <ul>
-                <li>
-                    <a href="#">
+                <li className="btn-2">
+                    <a href="http://www.google.com">
                         <Icon icon="dashboard"></Icon>
                         <span className="spacelb"></span>
                         <span className="nav-text">
@@ -35,61 +50,61 @@ class LeftNavBar extends Component {
                     </a>
 
                 </li>
-                <li class="has-subnav">
-                    <a href="#">
+                <li className="btn-2">
+                    <a href="http://www.google.com">
                         <Icon icon="grouped-bar-chart"></Icon>
                         <span className="spacelb"></span>
-                        <span class="nav-text">
-                            Graphiclas
+                        <span className="nav-text">
+                            Graphicals
                         </span>
                     </a>
 
                 </li>
-                <li class="has-subnav">
-                    <a href="#">
+                <li className="btn-2">
+                    <a href="http://www.google.com">
                        <Icon icon="mobile-phone"></Icon>
                        <span className="spacelb"></span>
-                        <span class="nav-text">
+                        <span className="nav-text">
                             Devices
                         </span>
                     </a>
 
                 </li>
-                <li>
-                    <a href="#">
+                <li className="btn-2">
+                    <a href="http://www.google.com">
                        <Icon icon="comparison"></Icon>
                        <span className="spacelb"></span>
-                        <span class="nav-text">
+                        <span className="nav-text">
                             Comparison
                         </span>
                     </a>
                 </li>
-                <li>
-                   <a href="#">
+                <li className="btn-2">
+                   <a href="http://www.google.com">
                         <Icon icon="predictive-analysis"></Icon>
                         <span className="spacelb"></span>
-                        <span class="nav-text">
-                            Predictive Analysis
+                        <span className="nav-text">
+                            Predictions
                         </span>
                     </a>
                 </li>
-                <li>
-                   <a href="#">
+                <li className="btn-2">
+                   <a href="http://www.google.com">
                        <Icon icon="help"></Icon>
                        <span className="spacelb"></span>
-                        <span class="nav-text">
+                        <span className="nav-text">
                             Help
                         </span>
                     </a>
                 </li>
             </ul>
 
-            <ul class="logout">
-                <li>
-                   <a href="#">
+            <ul className="logout">
+                <li className="btn-2">
+                   <a onClick={this.function_logout}>
                          <Icon icon="log-out"></Icon>
                          <span className="spacelb"></span>
-                        <span class="nav-text">
+                        <span className="nav-text">
                             Logout
                         </span>
                     </a>

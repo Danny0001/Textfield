@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './../../css/App.css'
 
 
@@ -9,7 +9,8 @@ class CuadroCrearDisp extends React.Component {
     super(props);
     this.state={
     list:[],
-    IdentificadorDisp:" ",
+    IdentificadorDisp:"",
+    PassDevice:"",
   }
   this.handleChange = this.handleChange.bind(this);
   this.crearDispositivo = this.crearDispositivo.bind(this);
@@ -17,16 +18,15 @@ class CuadroCrearDisp extends React.Component {
 
 
 handleChange(event) {
-  this.setState({IdentificadorDisp: event.target.value});
+  this.setState({[event.target.name]: event.target.value});
 }
 
 openTools() {
 var btn = document.getElementById('btnTools');
 console.log("hola");
 var className = btn.className;
-var res = '';
 
-if (className == "pt-button pt-intent-success buttonadd") {
+if (className === "pt-button pt-intent-success buttonadd") {
     className = "pt-button pt-intent-success buttonadd open";
     document.getElementById('migration-form').className = "CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer show active";
 }
@@ -59,34 +59,32 @@ handleSubmit(e) {
 
 crearDispositivo(e){
     e.preventDefault()
-    const { IdentificadorDisp } = this.state
-    //get the fruit object name from the form
-    //if we have a value
-    //call the addFruit method of the App component
-    //to change the state of the fruit list by adding an new item
+    const { IdentificadorDisp,PassDevice} = this.state
     if(typeof IdentificadorDisp === 'string' && IdentificadorDisp.length > 0) {
-    //  this.props.addDispositivo(IdentificadorDisp);
 
     console.log(IdentificadorDisp);
+    }
+    if(typeof PassDevice === 'string' && PassDevice.length > 0) {
+
+    console.log(PassDevice);
     }
   }
 
   render() {
     return (
-      <form id="migration-form" className="CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer" onSubmit={this.crearDispositivo}>
-        <label onClick={this.openTools} className="close">x</label>
-        <label class="titulodisp">Agregar Dispositivo</label>
-        <label class="pt-label labeldisp">
-           Identificador de Dispositivo
-          <input class= "pt-input inputdisp" type="text" value={this.state.IdentificadorDisp} onChange={this.handleChange} placeholder="Ingresar Identificador de Dispositivo" dir="auto"/>
-        </label>
-        <label class="pt-control pt-switch .pt-large">
-          <input type="checkbox"/>
-          <span class="pt-control-indicator"></span>
-          Estado
-        </label>
-        <button type="submit" class="pt-button buttonagreg" >Agregar</button>
-    </form>
+        <form id="migration-form" className="CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer" onSubmit={this.crearDispositivo}>
+          <label onClick={this.openTools} className="close">x</label>
+          <label className="titulodisp">Add Device</label>
+          <label className="pt-label labeldisp">
+             Device ID
+            <input className= "pt-input inputdisp" type="text" name="IdentificadorDisp" value={this.state.IdentificadorDisp} onChange={this.handleChange} placeholder="Device ID" dir="auto"/>
+          </label>
+          <label className="pt-label labeldisp">
+             Password Device
+            <input className= "pt-input inputdisp" type="password" name="PassDevice" value={this.state.PassDevice} onChange={this.handleChange} placeholder="Password Device" dir="auto"/>
+          </label>
+          <button type="submit" className="pt-button buttonagreg" >Add</button>
+      </form>
     );
   }
 }

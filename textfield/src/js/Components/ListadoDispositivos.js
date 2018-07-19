@@ -51,7 +51,6 @@ ListDevice(){
               </div>
             </div>
           </div>;
-    console.log(Device);
 
   })
   return renderList;

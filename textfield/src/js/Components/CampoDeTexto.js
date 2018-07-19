@@ -33,10 +33,10 @@ handleClick(){
 
     return(
       <div className='CampoDeTexto'>
-        <input className="IngresoDatos"
+        <input className="IngresoDatos form-control"
           onChange={ onChange }
           value={ value }
-          type={Types} name={Names} class="form-control" placeholder={PlaceHolders} pattern={Patterns} required
+          type={Types} name={Names} placeholder={PlaceHolders} pattern={Patterns} required
           onFocus={() => {this.setState({ isToogleOn: true, isToogleOff:false})}}
           onBlur={() => {this.setState({ isToogleOn:false, isToogleOff:true })}}
           ></input>

@@ -5,22 +5,6 @@ import Application from './js/Components/Application.js';
 import Profile from './js/Components/Profile.js';
 import {BrowserRouter,Route} from 'react-router-dom';
 import './css/App.css';
-import {
-    Boundary,
-    Breadcrumb,
-    Classes,
-    H5,
-    IMenuItemProps,
-    Label,
-    Menu,
-    MenuItem,
-    OverflowList,
-    Popover,
-    Position,
-    RadioGroup,
-    Slider,
-} from "@blueprintjs/core";
-import { Example, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
 
 /*
 const express = require('express')
@@ -52,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div class="App">
+        <div className="App">
           <Route exact path="/" component={Home}/>
           <Route exact path="/login" component={Login}/>
           <Route exact path="/app" component={Application}/>

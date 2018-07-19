@@ -2,30 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from "react-router-dom";
 import './../../css/App.css'
-import BarraLateral from './BarraLateral.js';
 import CuadroCrearDisp from './CuadroCrearDisp.js';
 import ListadoDispositivos from './ListadoDispositivos.js';
 import LeftNavBar from './LeftNavBar.js';
 import NavBar from './NavBar.js'
-import DropdownProfile from './DropDownProfile.js'
-import {
-  Button, Card, Elevation, Checkbox,Icon,
-    Boundary,
-    Breadcrumb,
-    Classes,
-    H5,
-    IMenuItemProps,
-    Label,
-    Menu,
-    MenuItem,
-    OverflowList,
-    Popover,
-    Position,
-    RadioGroup,
-    Slider,
-} from "@blueprintjs/core";
-import { Example, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
-
 
 class Application extends Component {
 
@@ -74,7 +54,7 @@ function_logout(){
               <button id="button" onClick={this.function_logout}>Cerrar sesión</button>
             </div>*/}
             {/*<InfoMediciones></InfoMediciones>*/}
-            
+
             <ListadoDispositivos></ListadoDispositivos>
             {/*<Perfil></Perfil>*/}
             <CuadroCrearDisp></CuadroCrearDisp>

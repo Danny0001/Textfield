@@ -8,28 +8,9 @@ import TextoExplicativo from './TextoExplicativo.js';
 import NavBar from './NavBar.js';
 import Boton from './Boton.js';
 import './../../css/App.css';
-import DropdownProfile from './DropDownProfile.js'
-import {
-  Button, Card, Elevation, Checkbox,Icon,
-    Boundary,
-    Breadcrumb,
-    Classes,
-    H5,
-    IMenuItemProps,
-    Label,
-    Menu,
-    MenuItem,
-    OverflowList,
-    Popover,
-    Position,
-    RadioGroup,
-    Slider,
-} from "@blueprintjs/core";
-import { Example, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
-
-
+//import DropdownProfile from './DropDownProfile.js'
 import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
+import { Cookies } from 'react-cookie';
 
 class Login extends Component
 {
@@ -55,7 +36,6 @@ class Login extends Component
   };
 
   componentDidMount() {
-    const { cookies } = this.props;
   if (document.cookie) {
     this.setState({ logged:true })
   }
@@ -70,7 +50,6 @@ class Login extends Component
       email: '',
       password: '',
       errors: {},
-      isFetching: false,
       redirect: false
     })
   }
@@ -104,6 +83,7 @@ class Login extends Component
       }
       else{
         this.setState({
+          isFetching: false,
           errors
         }, () =>{
           rej()
@@ -232,8 +212,8 @@ async handleSubmit(event) {
           <Redirect to="/app" />
         ) : (
 
-        <form class="navbar-form" id="login" onSubmit={ this.handleSubmit }>
-            <img className="logo" src='http://dragene.no/wp-content/uploads/2016/06/default1.jpg'/>
+        <form className="navbar-form" id="login" onSubmit={ this.handleSubmit }>
+            <img className="logo" alt="logo" src='http://dragene.no/wp-content/uploads/2016/06/default1.jpg'/>
             <TextoExplicativo Texto={['Correo']}/>
             <CampoDeTexto
               className={ isEmpty( errors.email ) ? 'pt-input' : 'pt-input pt-intent-danger' }
