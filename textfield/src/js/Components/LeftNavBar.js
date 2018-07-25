@@ -51,16 +51,6 @@ class LeftNavBar extends Component {
 
                 </li>
                 <li className="btn-2">
-                    <a href="http://www.google.com">
-                        <Icon icon="grouped-bar-chart"></Icon>
-                        <span className="spacelb"></span>
-                        <span className="nav-text">
-                            Graphicals
-                        </span>
-                    </a>
-
-                </li>
-                <li className="btn-2">
                     <a href="/app">
                        <Icon icon="mobile-phone"></Icon>
                        <span className="spacelb"></span>
@@ -69,24 +59,6 @@ class LeftNavBar extends Component {
                         </span>
                     </a>
 
-                </li>
-                <li className="btn-2">
-                    <a href="http://www.google.com">
-                       <Icon icon="comparison"></Icon>
-                       <span className="spacelb"></span>
-                        <span className="nav-text">
-                            Comparison
-                        </span>
-                    </a>
-                </li>
-                <li className="btn-2">
-                   <a href="http://www.google.com">
-                        <Icon icon="predictive-analysis"></Icon>
-                        <span className="spacelb"></span>
-                        <span className="nav-text">
-                            Predictions
-                        </span>
-                    </a>
                 </li>
                 <li className="btn-2">
                    <a href="/Help">

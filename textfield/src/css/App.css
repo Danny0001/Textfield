@@ -931,3 +931,34 @@ nav ul,nav li {
   flex-wrap: nowrap;
   flex-direction: row;
 }
+
+.DashboardContainer{
+      padding: 15px 5px 20px;
+}
+.DashboardCard{
+      padding: 15px 5px 20px;
+}
+.CardAllDashboardRow{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.CardSelf{
+  margin: 2%;
+}
+
+.CardDashboardTittle{
+  color: red;
+  margin-bottom: 3px solid red;
+}
+
+.CardDashboardInfo{
+  padding: 10px 20px;
+}
+
+.CardElementInfo{
+  margin: 10px 0 0;
+}
+.SpanTitleDashboard{
+  font-weight: 800;
+}
