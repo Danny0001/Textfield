@@ -41,7 +41,7 @@ class LeftNavBar extends Component {
       <nav className="main-menu">
             <ul>
                 <li className="btn-2">
-                    <a href="http://www.google.com">
+                    <a href="/Dashboard">
                         <Icon icon="dashboard"></Icon>
                         <span className="spacelb"></span>
                         <span className="nav-text">
@@ -61,7 +61,7 @@ class LeftNavBar extends Component {
 
                 </li>
                 <li className="btn-2">
-                    <a href="http://www.google.com">
+                    <a href="/app">
                        <Icon icon="mobile-phone"></Icon>
                        <span className="spacelb"></span>
                         <span className="nav-text">
@@ -89,7 +89,7 @@ class LeftNavBar extends Component {
                     </a>
                 </li>
                 <li className="btn-2">
-                   <a href="http://www.google.com">
+                   <a href="/Help">
                        <Icon icon="help"></Icon>
                        <span className="spacelb"></span>
                         <span className="nav-text">

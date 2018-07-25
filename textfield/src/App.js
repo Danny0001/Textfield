@@ -3,34 +3,10 @@ import Login from './js/Components/Login.js';
 import Home from './js/Components/Home.js';
 import Application from './js/Components/Application.js';
 import Profile from './js/Components/Profile.js';
+import Dashboard from './js/Components/Dashboard.js';
+import Help from './js/Components/Help.js';
 import {BrowserRouter,Route} from 'react-router-dom';
 import './css/App.css';
-
-/*
-const express = require('express')
-const app = express()
-*/
-/*
-import logger from 'morgan'
-import mongoose from 'mongoose'
-import passport from 'passport'
-import kue from 'kue'
-
-import { MONGO } from './js/config/config'
-import routesBinder from './js/libs/Route'
-
-const database  = process.env.MONGO_URL || MONGO.uri
-
-mongoose.Promise = global.Promise; //mongoose uso de promesas es6
-mongoose.connect(database);
-
-var express = require('express')
-var bodyParser = require("body-parser")
-
-
-
-app.use(bodyParser());
-*/
 
 class App extends Component {
   render() {
@@ -41,6 +17,8 @@ class App extends Component {
           <Route exact path="/login" component={Login}/>
           <Route exact path="/app" component={Application}/>
           <Route exact path="/Profile" component={Profile}/>
+          <Route exact path="/Dashboard" component={Dashboard}/>
+          <Route exact path="/Help" component={Help}/>
         </div>
       </BrowserRouter>
 
