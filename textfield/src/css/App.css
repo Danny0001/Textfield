@@ -962,3 +962,6 @@ nav ul,nav li {
 .SpanTitleDashboard{
   font-weight: 800;
 }
+.SearchNavBar{
+  border-radius: 20px;
+}
