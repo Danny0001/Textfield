@@ -207,7 +207,6 @@ async handleSubmit(event) {
     const { errors, redirect,logged } = this.state
     return(
       <div className="App">
-        <NavBar></NavBar>
         {(redirect || logged) ? (
           <Redirect to="/app" />
         ) : (
