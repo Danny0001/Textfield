@@ -34,8 +34,8 @@ cambio(){
         <LeftNavBar></LeftNavBar>
         <div >
           <div className="container">
-            <div className="DashboardContainer row">
-            <div className="DashboardCard col-xs-12 col-sm-6 col-lg-3">
+            <div className="DashboardContainer ">
+            <div className="DashboardCard">
             <Card interactive={true} elevation={Elevation.TWO} className="CardSelf">
               <div className="CardDashboardTittle">
               <h5>

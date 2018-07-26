@@ -12,7 +12,7 @@ class NavBar extends Component {
       <Link to="/Dashboard" className="homecolor">
       <div className="pt-navbar-heading">Domergy</div>
       </Link>
-      <input className="pt-input" placeholder="Search files..." type="text" />
+      <input className="pt-input SearchNavBar" placeholder="Search files..." type="text" />
     </div>
     <div className="pt-navbar-group pt-align-right homecolor">
       <Link to="/Dashboard" className="homecolor">

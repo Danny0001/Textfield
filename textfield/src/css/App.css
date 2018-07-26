@@ -962,6 +962,7 @@ nav ul,nav li {
 .SpanTitleDashboard{
   font-weight: 800;
 }
+
 .homecolor{
   color:white;
 }
@@ -999,4 +1000,9 @@ nav ul,nav li {
 }
 .ZIndex{
   z-index: 100;
+}
+
+.SearchNavBar{
+  border-radius: 20px;
+
 }
