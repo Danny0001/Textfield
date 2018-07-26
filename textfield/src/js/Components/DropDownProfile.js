@@ -21,12 +21,9 @@ import { Example, handleStringChange, IExampleProps } from "@blueprintjs/docs-th
 
  class DropdownProfile extends React.PureComponent<IExampleProps> {
      render() {
-        const exampleMenu = (
-          console.log("sdgvdsfv")
-        );
         return (
             <Example options={false} >
-                <Popover content={exampleMenu} position={Position.RIGHT_BOTTOM}>
+                <Popover content={console.log("fgd")} position={Position.RIGHT_BOTTOM}>
                     <button className="pt-button pt-minimal pt-icon-user"></button>
                 </Popover>
             </Example>
