@@ -925,6 +925,12 @@ nav ul,nav li {
   flex-direction: row;
   margin-bottom: 10px;
 }
+.cardProfile1{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
 
 .boxCardProfile{
   display: flex;
@@ -1005,4 +1011,14 @@ nav ul,nav li {
 .SearchNavBar{
   border-radius: 20px;
 
+}
+
+.ProfileTittles{
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.ProfileInput{
+  width: 500px;
 }
