@@ -155,23 +155,45 @@ outline: none;
   margin-top: -2px;
   visibility: hidden;
 }
+{/*----------------------------------------------------------------------------------------*/}
+{/*-----------------------------------LOGIN------------------------------------------------*/}
 
+.bodyLog{
+  background: linear-gradient(to top, rgb(16, 81, 172) , rgb(16, 36, 172), rgb(89, 16, 172), rgb(136, 16, 172), rgb(164, 16, 172));
+}
 .logo {
-  width: 10%;
-  border-radius: 50%;
-  margin-left: 45%;
+  width: 50%;
+  //border-radius: 50%;
+  margin-left: 25%;
+  display: flex;
+  justify-content: center;
 }
 
+.CardLogin{
+  background-color: rgba(191, 191, 191, 0.66);
+  color: white;
+}
+
+
 .ForgotPass {
-  color: #cccbc8;
+  color: rgb(235, 234, 234);
   font-size: 13px;
   float: right;
 }
 
+.ButtonLogin{
+  margin-left: 30%;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(127, 127, 127);
+  width: 34%;
+  padding: 10px;
+}
 
 .TextoExplicativo {
-  font-size: 14px;
-  color: #696969;
+  color: rgb(235, 234, 234);
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .Texto {
