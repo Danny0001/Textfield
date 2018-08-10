@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import './../../css/App.css'
-import Logo from './../../images/Logo.png'
+import Logo from './../../css/imagenes/LOGO.png'
 import 'font-awesome/css/font-awesome.css';
 
 class Home extends Component {
