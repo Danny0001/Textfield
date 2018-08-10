@@ -29,7 +29,7 @@ cambio(){
 }
   render() {
     return (
-      <div className="homeP">
+      <div className="homeP Dashback">
         <NavBar></NavBar>
         <LeftNavBar></LeftNavBar>
         <div >
@@ -63,10 +63,51 @@ cambio(){
             </Card>
             </div>
             <div className="DashboardCard">
-            <Card interactive={true} elevation={Elevation.TWO} className="CardSelf ">
+            <Card interactive={true} elevation={Elevation.TWO} className="CardNum CardSelf ">
               <div className="CardDashboardTittle">
               <h5>
-                Energy
+                Cash
+              </h5>
+            </div>
+              <div className="CardDashboardInfo">
+
+                <div className="CardElementInfo">
+                  <Icon className="IconDollarKw" icon="dollar" iconSize={50} />
+                  <span className="CashKW"> 30.000</span>
+                </div>
+              </div>
+              <div className="CardDashboardTittle">
+              <h5>
+                KW/H
+              </h5>
+            </div>
+              <div className="CardDashboardInfo">
+                <div className="CardElementInfo">
+                  <Icon className="IconDollarKw" icon="offline" iconSize={50} />
+                  <span className="CashKW"> 75.34 Kw/h</span>
+                </div>
+              </div>
+            </Card>
+          </div>
+            <div className="DashboardCard">
+            <Card interactive={true} elevation={Elevation.TWO} className="CardSelfN CardNum2">
+              <div className="CardDashboardTittle">
+              <h5>
+                N° Devices
+              </h5>
+            </div>
+              <div className="CardDashboardInfo">
+                <div className="CardElementInfo">
+                  <span className="WordNum">5</span>
+                </div>
+              </div>
+            </Card>
+            </div>
+            <div className="DashboardCard">
+            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
+              <div className="CardDashboardTittle">
+              <h5>
+                N° Devices
               </h5>
             </div>
               <div className="CardDashboardInfo">
