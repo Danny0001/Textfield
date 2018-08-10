@@ -8,6 +8,7 @@ import TextoExplicativo from './TextoExplicativo.js';
 import NavBar from './NavBar.js';
 import Boton from './Boton.js';
 import './../../css/App.css';
+import Logo from './../../css/imagenes/LOGO.png'
 //import DropdownProfile from './DropDownProfile.js'
 import { instanceOf } from 'prop-types';
 import { Cookies } from 'react-cookie';
@@ -198,21 +199,19 @@ async handleSubmit(event) {
     .catch(() => {
       this.setState({
         isFetching: false,
-      })
-    })*/
-
+      })  })*/
 }
-
   render(){
     const { errors, redirect,logged } = this.state
     return(
-      <div className="App">
+      <div class="App bodyLog" id="large-header " >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
         {(redirect || logged) ? (
           <Redirect to="/app" />
         ) : (
 
-        <form className="navbar-form" id="login" onSubmit={ this.handleSubmit }>
-            <img className="logo" alt="logo" src='http://dragene.no/wp-content/uploads/2016/06/default1.jpg'/>
+        <form className="navbar-form CardLogin" id="login" onSubmit={ this.handleSubmit }>
+            <img className="logo" alt="logo" src={Logo}></img>
             <TextoExplicativo Texto={['Correo']}/>
             <CampoDeTexto
               className={ isEmpty( errors.email ) ? 'pt-input' : 'pt-input pt-intent-danger' }
@@ -234,7 +233,7 @@ async handleSubmit(event) {
               //Patterns="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               onChange={ this.handleChange }/>
             <div className="link"><a href='http://www.google.com' className='ForgotPass'>Olvidaste tu contraseña?</a></div>
-            <Boton onClick={ this.handleClick } Names={['Ingresar']}/>
+            <button onClick={ this.handleClick } className="ButtonLogin">Ingresar</button>
           </form>
         )}
       </div>
