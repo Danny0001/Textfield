@@ -3,7 +3,7 @@ import './../../css/App.css'
 import NavBar from './NavBar.js'
 import LeftNavBar from './LeftNavBar.js'
 import { Button, Card, Elevation, Checkbox,Icon } from "@blueprintjs/core";
-import { Alignment, ButtonGroup, IconName, Switch } from "@blueprintjs/core";
+import { Alignment, ButtonGroup, IconName, Switch, AnchorButton } from "@blueprintjs/core";
 import {
     Boundary,
     Breadcrumb,
@@ -36,37 +36,29 @@ cambio(){
         <div className="content">
           <div className="cardProfile1">
             <div><h1>User Profile</h1></div>
-              <div class="bp3-button-group .modifier">
-                <a class="bp3-button bp3-icon-database" tabindex="0" role="button">Queries</a>
-                <a class="bp3-button bp3-icon-function" tabindex="0" role="button">Functions</a>
-                <a class="bp3-button" tabindex="0" role="button">
-                  Options <span class="bp3-icon-standard bp3-icon-caret-down bp3-align-right"></span>
-                </a>
-              </div>
+            <ButtonGroup minimal={true} >
+                <Button class="bp3-button bp3-icon-add " type="button"  icon="edit">Edit</Button>
+                <Button class="bp3-button bp3-icon-add " type="button"  icon="key">Change Password</Button>
+                {/* <Button class="bp3-button bp3-icon-add " type="button" intent="danger" icon="trash">Delete</Button>*/}
+              {/*  <AnchorButton rightIcon="caret-down">Options</AnchorButton>*/}
+            </ButtonGroup>
           </div>
             <Card interactive={true} elevation={Elevation.TWO} className="cardProfile">
               <div className="imgProfileBox">
                 <img className="imgProfile" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"></img>
-                <FileInput disabled={true} text="Choose Image..." onInputChange={this.cambio()} />
               </div>
               <div className="infoProfile ProfileTittles">
                 <FormGroup
-                  label="Nombre"
+                  label="Name"
                   labelFor="text-input"
                   labelInfo="(required)">
                   <InputGroup className="ProfileInput" id="text-input" placeholder="Ingresar Nombre" />
                 </FormGroup>
                 <FormGroup
-                  label="Apellidos"
+                  label="Lastname"
                   labelFor="text-input"
                   labelInfo="(required)">
                   <InputGroup className="ProfileInput"  id="text-input" placeholder="Ingresar Apellidos" />
-                </FormGroup>
-                <FormGroup
-                  label="Fecha de nacimiento"
-                  labelFor="text-input"
-                  labelInfo="(required)">
-                  <InputGroup className="ProfileInput"  id="text-input" placeholder="Placeholder text" />
                 </FormGroup>
                 <FormGroup
                   label="E-mail"
@@ -75,18 +67,12 @@ cambio(){
                   <InputGroup className="ProfileInput"  id="text-input" placeholder="Placeholder text" />
                 </FormGroup>
                 <FormGroup
-                  label="Telefono"
+                  label="Organization"
                   labelFor="text-input"
                   labelInfo="(required)">
-                  <InputGroup className="ProfileInput"  id="text-input" placeholder="Placeholder text" />
+                  <InputGroup className="ProfileInput"  id="text-input" placeholder="Ingresar Apellidos" />
                 </FormGroup>
-                <FormGroup
-                  label="Direccion"
-                  labelFor="text-input"
-                  labelInfo="(required)">
-                  <InputGroup className="ProfileInput"  id="text-input" placeholder="Placeholder text" />
-                </FormGroup>
-                <Button type="button" class="bp3-button bp3-icon-add " >Change</Button>
+                <Button type="button" class="bp3-button bp3-icon-add " intent="success" >Change</Button>
             </div>
             <div>
             </div>
