@@ -5,6 +5,7 @@ import LeftNavBar from './LeftNavBar.js'
 import Chart from './Chart.js'
 import Chart2 from './Chart2.js'
 import Chart3 from './Chart3.js'
+import Chart4 from './Chart4.js'
 import { Button, Card, Elevation, Checkbox,Icon } from "@blueprintjs/core";
 import {
     Boundary,
@@ -91,6 +92,7 @@ cambio(){
         <div >
           <div className="container">
             <div className="DashboardContainer ">
+              {/*
             <div className="DashboardCard">
             <Card interactive={true} elevation={Elevation.TWO} className="CardSelf">
               <div className="CardDashboardTittle">
@@ -118,6 +120,7 @@ cambio(){
               </div>
             </Card>
             </div>
+            */}
             <div className="DashboardCard">
             <Card interactive={true} elevation={Elevation.TWO} className="CardNum CardSelf ">
               <div className="CardDashboardTittle">
@@ -146,20 +149,6 @@ cambio(){
             </Card>
           </div>
             <div className="DashboardCard">
-            <Card interactive={true} elevation={Elevation.TWO} className="CardSelfN CardNum2">
-              <div className="CardDashboardTittle">
-              <h5>
-                N° Devices
-              </h5>
-            </div>
-              <div className="CardDashboardInfo">
-                <div className="CardElementInfo">
-                  <span className="WordNum">5</span>
-                </div>
-              </div>
-            </Card>
-            </div>
-            <div className="DashboardCard">
             <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
               <div className="CardDashboardInfo">
                 <Chart chartData={this.state.chartData} LegendPosition="top"  Month=": May"/>
@@ -177,6 +166,19 @@ cambio(){
             <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
               <div className="CardDashboardInfo">
                 <Chart3/>
+              </div>
+            </Card>
+            </div>
+            <div className="DashboardCard">
+            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
+              <div className="CardDashboardInfo">
+                <Chart4/>
+              </div>
+            </Card>
+            </div>
+            <div className="DashboardCard">
+            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
+              <div className="CardDashboardInfo">
               </div>
             </Card>
             </div>

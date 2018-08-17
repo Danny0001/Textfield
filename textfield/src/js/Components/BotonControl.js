@@ -38,7 +38,7 @@ class BotonControl extends Component {
 this.setState({estado: !this.state.estado});
 //console.log(this.state.estado);
   //  console.log(this.state.estado);
-
+//axios.put('http://10.108.0.45:3001/api/device/PIRD-SMARTMETERLAB-1/command/POWER',
   axios.put('http://10.108.0.45:3001/api/device/PIRD-SMARTMETERLAB-1/command/POWER', {
       value: "toggle"},
       {header: {
