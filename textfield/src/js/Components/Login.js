@@ -224,7 +224,7 @@ async handleSubmit(event) {
               onChange={ this.handleChange} />
             <TextoExplicativo Texto={['Contraseña']}/>
             <CampoDeTexto
-              className={ isEmpty( errors.password ) ? 'pt-input' : 'pt-input pt-intent-danger' }
+              className={ isEmpty( errors.password ) ? 'pt-input ' : 'pt-input pt-intent-danger ' }
               id="password"
               value={this.state.password}
               Names={['password']}
