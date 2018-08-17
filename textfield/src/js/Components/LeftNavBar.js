@@ -73,7 +73,7 @@ class LeftNavBar extends Component {
 
             <ul className="logout">
                 <li className="btn-2">
-                   <a onClick={this.function_logout}>
+                   <a onClick={this.function_logout}  href="/Login">
                          <Icon icon="log-out"></Icon>
                          <span className="spacelb"></span>
                         <span className="nav-text">

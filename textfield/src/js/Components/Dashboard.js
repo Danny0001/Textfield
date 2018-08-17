@@ -92,6 +92,66 @@ cambio(){
         <div >
           <div className="container">
             <div className="DashboardContainer ">
+              <div className="DashboardCard">
+                <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
+                  <div className="CardDashboardTittle">
+                  <h5>
+                    Dispositivo X
+                  </h5>
+                </div>
+                <div>
+                  5
+                </div>
+                </Card>
+              </div>
+              <div className="DashboardCard">
+                <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
+                  <div className="CardDashboardTittle">
+                  <h5>
+                    Dispositivo X
+                  </h5>
+                </div>
+                <div>
+                  5
+                </div>
+                </Card>
+              </div>
+              <div className="DashboardCard">
+                <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
+                  <div className="CardDashboardTittle">
+                  <h5>
+                    Dispositivo X
+                  </h5>
+                </div>
+                <div>
+                  5
+                </div>
+                </Card>
+              </div>
+              <div className="DashboardCard">
+                <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
+                  <div className="CardDashboardTittle">
+                  <h5>
+                    N° Devices
+                  </h5>
+                </div>
+                <div>
+                  5
+                </div>
+                </Card>
+              </div>
+              <div className="DashboardCard">
+                <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
+                  <div className="CardDashboardTittle">
+                  <h5>
+                    Dispositivo X
+                  </h5>
+                </div>
+                <div>
+                  5
+                </div>
+                </Card>
+              </div>
               {/*
             <div className="DashboardCard">
             <Card interactive={true} elevation={Elevation.TWO} className="CardSelf">

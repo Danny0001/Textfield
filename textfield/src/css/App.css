@@ -998,7 +998,7 @@ nav ul,nav li {
        justify-content: flex-start;
 }
 .DashboardCard{
-      padding: 15px 5px 20px;
+    padding: 10px 5px 10px;
 }
 
 .CardSelf{
@@ -1051,6 +1051,13 @@ nav ul,nav li {
   font-weight: 600;
   font-size: 50px;
 }
+
+.smallCard{
+  margin: 2px;
+  width: 191px;
+  height: 100px;
+}
+
 
 .homecolor{
   color:white;
