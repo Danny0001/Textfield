@@ -80,8 +80,16 @@ crearDispositivo(e){
             <input className= "pt-input inputdisp" type="text" name="IdentificadorDisp" value={this.state.IdentificadorDisp} onChange={this.handleChange} placeholder="Device ID" dir="auto"/>
           </label>
           <label className="pt-label labeldisp">
-             Password Device
-            <input className= "pt-input inputdisp" type="password" name="PassDevice" value={this.state.PassDevice} onChange={this.handleChange} placeholder="Password Device" dir="auto"/>
+             Type
+            <input className= "pt-input inputdisp" type="password" name="PassDevice" value={this.state.PassDevice} onChange={this.handleChange} placeholder="Type" dir="auto"/>
+          </label>
+          <label className="pt-label labeldisp">
+             Name
+            <input className= "pt-input inputdisp" type="password" name="PassDevice" value={this.state.PassDevice} onChange={this.handleChange} placeholder="Nombre" dir="auto"/>
+          </label>
+          <label className="pt-label labeldisp">
+             Password
+            <input className= "pt-input inputdisp" type="password" name="PassDevice" value={this.state.PassDevice} onChange={this.handleChange} placeholder="Password" dir="auto"/>
           </label>
           <button type="submit" className="pt-button buttonagreg" >Add</button>
       </form>
