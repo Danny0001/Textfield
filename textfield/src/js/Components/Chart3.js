@@ -34,7 +34,7 @@ class Chart3 extends Component {
     render() {
       return (
         <div>
-          <h2>Line Example</h2>
+          <h2>Expense of the day</h2>
           <Pie data={this.state.chartData3} />
         </div>
       );

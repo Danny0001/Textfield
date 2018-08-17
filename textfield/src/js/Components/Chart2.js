@@ -40,7 +40,7 @@ class Chart2 extends Component {
     render() {
       return (
         <div>
-          <h2>Line Example</h2>
+          <h2>Expense of the day</h2>
           <Line data={this.state.chartData2} />
         </div>
       );
