@@ -61,6 +61,15 @@ class LeftNavBar extends Component {
 
                 </li>
                 <li className="btn-2">
+                   <a href="/Analisys">
+                       <Icon icon="timeline-line-chart"></Icon>
+                       <span className="spacelb"></span>
+                        <span className="nav-text">
+                            Analisys
+                        </span>
+                    </a>
+                </li>
+                <li className="btn-2">
                    <a href="/Help">
                        <Icon icon="help"></Icon>
                        <span className="spacelb"></span>

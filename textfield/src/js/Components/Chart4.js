@@ -44,7 +44,7 @@ class Chart4 extends Component {
     render() {
       return (
         <div>
-          <h2>Doughnut</h2>
+          <h2>Device consume</h2>
           <Doughnut data={this.state.chartData4} />
         </div>
       );

@@ -5,6 +5,7 @@ import Application from './js/Components/Application.js';
 import Profile from './js/Components/Profile.js';
 import Dashboard from './js/Components/Dashboard.js';
 import Help from './js/Components/Help.js';
+import Analisys from './js/Components/Analisys.js';
 import {BrowserRouter,Route} from 'react-router-dom';
 import './css/App.css';
 
@@ -20,6 +21,7 @@ class App extends Component {
           <Route exact path="/Profile" component={Profile}/>
           <Route exact path="/Dashboard" component={Dashboard}/>
           <Route exact path="/Help" component={Help}/>
+          <Route exact path="/Analisys" component={Analisys}/>
         </div>
       </BrowserRouter>
 

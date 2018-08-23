@@ -96,11 +96,11 @@ cambio(){
                 <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
                   <div className="CardDashboardTittle">
                   <h5>
-                    Dispositivo X
+                    Today KW/H
                   </h5>
                 </div>
                 <div>
-                  5
+                  56.4
                 </div>
                 </Card>
               </div>
@@ -108,11 +108,11 @@ cambio(){
                 <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
                   <div className="CardDashboardTittle">
                   <h5>
-                    Dispositivo X
+                    Today $
                   </h5>
                 </div>
                 <div>
-                  5
+                  $850
                 </div>
                 </Card>
               </div>
@@ -120,11 +120,11 @@ cambio(){
                 <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
                   <div className="CardDashboardTittle">
                   <h5>
-                    Dispositivo X
+                    KW/H Cost
                   </h5>
                 </div>
                 <div>
-                  5
+                  $105
                 </div>
                 </Card>
               </div>
@@ -144,11 +144,11 @@ cambio(){
                 <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
                   <div className="CardDashboardTittle">
                   <h5>
-                    Dispositivo X
+                    N° Active Device
                   </h5>
                 </div>
                 <div>
-                  5
+                  3
                 </div>
                 </Card>
               </div>
