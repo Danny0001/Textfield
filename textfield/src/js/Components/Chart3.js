@@ -9,9 +9,9 @@ class Chart3 extends Component {
     this.state={
       chartData3:{
         labels: [
-          'Red',
-          'Green',
-          'Yellow'
+          'Device 1',
+          'Device 2',
+          'Device 3'
         ],
         datasets: [{
           data: [300, 50, 100],
