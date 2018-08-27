@@ -47,7 +47,7 @@ class Home extends Component {
                   <i className="fa fa-globe" aria-hidden="true"></i>
                 </div>
                 <div className="text">
-                  <h3>CONTRIBUYE CON EL MEDIO AMBIENTE Y REDUCE TU HUELLA DE CARBONO</h3>
+                  <h3 className="textobloque">CONTRIBUYE CON EL MEDIO AMBIENTE Y REDUCE TU HUELLA DE CARBONO</h3>
                 </div>
               </div>
               <div className="bloque">
@@ -55,15 +55,15 @@ class Home extends Component {
                   <i className="fa fa-battery-three-quarters" aria-hidden="true"></i>
                 </div>
                 <div className="text">
-                  <h3>AHORRA ENTRE UN 10% Y 20% DE CONSUMO ENERGÉTICO</h3>
+                  <h3 className="textobloque">AHORRA ENTRE UN 10% Y 20% DE CONSUMO ENERGÉTICO</h3>
                 </div>
               </div>
               <div className="bloque">
                 <div className="icon">
                   <i className="fa fa-industry" aria-hidden="true"></i>
                 </div>
-                <div className="text">
-                  <h3>VERIFICA TU PLAN ENERGÉTICO Y CERTIFICATE EN EFICIENCIA ENERGÉTICA (ISO 50.001 )</h3>
+                <div classtextobloqueName="text">
+                  <h3 className="textobloque">VERIFICA TU PLAN ENERGÉTICO Y CERTIFICATE EN EFICIENCIA ENERGÉTICA (ISO 50.001 )</h3>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ class Home extends Component {
                   <i className="fa fa-sticky-note" aria-hidden="true"></i>
                 </div>
                 <div className="text">
-                  <h3>ADMINISTRA TUS MEDIOS DE GENERACIÓN ELÉCTRICA</h3>
+                  <h3 className="textobloque">ADMINISTRA TUS MEDIOS DE GENERACIÓN ELÉCTRICA</h3>
                 </div>
               </div>
               <div className="bloque">
@@ -81,7 +81,7 @@ class Home extends Component {
                   <i className="fa fa-sun-o" aria-hidden="true"></i>
                 </div>
                 <div className="text">
-                  <h3>INTEGRA VARIABLES ENERGÉTICAS A TU PROCESO DE PRODUCCIÓN</h3>
+                  <h3 className="textobloque">INTEGRA VARIABLES ENERGÉTICAS A TU PROCESO DE PRODUCCIÓN</h3>
                 </div>
               </div>
               <div className="bloque">
@@ -89,7 +89,7 @@ class Home extends Component {
                   <i className="fa fa-mobile" aria-hidden="true"></i>
                 </div>
                 <div className="text">
-                  <h3>GESTIONA TU PLAN DE CONSUMO ENERGÉTICO</h3>
+                  <h3 className="textobloque">GESTIONA TU PLAN DE CONSUMO ENERGÉTICO</h3>
                 </div>
               </div>
             </div>

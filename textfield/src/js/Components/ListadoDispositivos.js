@@ -4,6 +4,7 @@ import BarraMenu from './BarraMenu.js';
 import { Icon } from "@blueprintjs/core";
 import _ from "lodash";
 import BotonControl from './BotonControl.js';
+import InactiveButton from './InactiveButton.js';
 
 
 class ListadoDispositivos extends Component {
@@ -36,7 +37,14 @@ ListDevice(){
     return   <div className="CuadroDispositivo2 pt-card pt-interactive pt-elevation-2 ">
 
             <div className="imagedispositivo">
-              <BotonControl estado={Device.power}></BotonControl>
+
+              {(Device.status)?(
+                <BotonControl estado={Device.power}></BotonControl>
+              ):(
+                <InactiveButton></InactiveButton>
+              )
+
+              }
 
             </div>
             <div className="infodisp">
