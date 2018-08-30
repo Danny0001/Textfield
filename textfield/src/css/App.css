@@ -671,6 +671,9 @@ div .Nombredisp{
 #btnTools{
   outline:0px;
 }
+#btnTools2{
+  outline:0px;
+}
 
 
 .CuadroCrearDisp{
@@ -1126,4 +1129,13 @@ nav ul,nav li {
 }
 .textobloque {
   color:white;
+}
+
+{/*----------------------------------------------------------------------------------------*/}
+{/*-----------------------------------Overlay--------------------------------------------*/}
+
+.OverlayD{
+  background-color: black;
+  width: 50%;
+  height: 50%;
 }

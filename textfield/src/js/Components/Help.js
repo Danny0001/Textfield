@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './../../css/App.css'
 import NavBar from './NavBar.js'
 import LeftNavBar from './LeftNavBar.js'
+import Overlay from './Overlay.js'
 import { Button, Card, Elevation, Checkbox,Icon } from "@blueprintjs/core";
 import {
     Boundary,
@@ -34,6 +35,7 @@ cambio(){
         <LeftNavBar></LeftNavBar>
         <div className="content">
           <h1>Help</h1>
+          <Overlay></Overlay>
         </div>
       </div>
     );
