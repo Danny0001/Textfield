@@ -13,23 +13,22 @@ class ListadoDispositivos extends Component {
   {
     super(props);
     this.state={
-    Dispositivo:[{name:"Computer 1", status:false, power:true }, {name:"Computer 2", status:true, power:false}, {name:"Computer 3", status:true, power:true}, {name:"Computer 4", status:false, power:true }, {name:"Computer 1", status:false, power:true }, {name:"Computer 2", status:true, power:false}, {name:"Computer 3", status:true, power:true}, {name:"Computer 4", status:false, power:true }],
+    Dispositivo:[],
+    IsLoaded: false,
   }
 
 }
-/*
-CambioButton(){
-  const Device = this.state.Dispositivo;
-  let botonAct = ["botonapp"]
-    if(Device.power) {
-      botonAct.push('botonActive');
-    }
-}
-*/
-componentWillMount(power) {
-     //console.log("componentWillMount listaaaaaaaaaaaaaaa", power)
 
-  }
+componentDidMount(){
+  fetch("http://localhost:3001/api/device/123456789")
+  .then(res => res.json())
+  .then(json => {
+    this.setState({
+      IsLoaded:true,
+      Dispositivo:json,
+    })
+  });
+}
 
 ListDevice(){
   const renderList = this.state.Dispositivo.map((Device) =>{ //props
@@ -38,8 +37,8 @@ ListDevice(){
 
             <div className="imagedispositivo">
 
-              {(Device.status)?(
-                <BotonControl estado={Device.power}></BotonControl>
+              {(Device.device.online)?(
+                <BotonControl estado={Device.device.online}></BotonControl>
               ):(
                 <InactiveButton></InactiveButton>
               )
@@ -49,12 +48,12 @@ ListDevice(){
             </div>
             <div className="infodisp">
               <div className="Nombredisp" >
-                {Device.name}
+                {Device.device.name}
               </div>
               <div className="statedisp">
                 Estado:
                 <div className="circlestate">
-                  <Icon icon="full-circle" iconSize={10} className={( Device.status ? "GreenColor" : "RedColor")}/>
+                  <Icon icon="full-circle" iconSize={10} className={( Device.device.active ? "GreenColor" : "RedColor")}/>
                 </div>
               </div>
             </div>
