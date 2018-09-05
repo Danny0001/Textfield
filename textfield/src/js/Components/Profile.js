@@ -51,6 +51,7 @@ componentDidMount(){
       IsLoaded:true,
       User:json,
     })
+    console.log(this.state.User.user)
   });
 }
 GetUser(){
