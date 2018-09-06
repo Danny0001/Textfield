@@ -3,6 +3,7 @@ import './../../css/App.css'
 import axios from 'axios';
 import NavBar from './NavBar.js'
 import LeftNavBar from './LeftNavBar.js'
+import { Redirect } from "react-router-dom";
 import { Button, Card, Elevation, Checkbox,Icon } from "@blueprintjs/core";
 import { Alignment, ButtonGroup, IconName, Switch, AnchorButton } from "@blueprintjs/core";
 import {
@@ -37,13 +38,18 @@ class Profile extends Component {
       edit:false,
       User:[],
       IsLoaded:false,
+      logged:false,
     };
 
     this.editItem= this.editItem.bind(this);
     this.handleChange = this.handleChange.bind(this);
 }
 
+
 componentDidMount(){
+  if (document.cookie) {
+    this.setState({ logged:true })
+  }
   fetch("http://localhost:3002/api/user/admin@domergy.cl")
   .then(res => res.json())
   .then(json => {
@@ -51,6 +57,7 @@ componentDidMount(){
       IsLoaded:true,
       User:json,
     })
+    this.GetUser();
     console.log(this.state.User.user)
   });
 }
@@ -82,7 +89,7 @@ handleChange(event){
 
 editItem(edit){
   this.setState({edit: !this.state.edit});
-  this.GetUser();
+  //this.GetUser();
   axios.put("http://localhost:3002/api/user/05360643-ee4a-44fa-95e5-a4c3463bccd1/attribute",
   {firstname: this.state.firstname,})
   axios.put("http://localhost:3002/api/user/05360643-ee4a-44fa-95e5-a4c3463bccd1/attribute",
@@ -92,6 +99,7 @@ editItem(edit){
 
   render() {
     var {IsLoaded, User, edit}=this.state;
+    const {logged}=this.state
     if(!IsLoaded){
       return <div>Loading...</div>;
     }
@@ -99,6 +107,8 @@ editItem(edit){
     {
       return (
       <div className="homeP">
+        {(logged) ? (
+        <div>
         <NavBar></NavBar>
         <LeftNavBar></LeftNavBar>
         {(edit) ? (
@@ -165,6 +175,10 @@ editItem(edit){
         </div>
         </Card>
     </div>)}
+  </div>
+) : (
+  <Redirect to="/login" />
+)}
       </div>
     );
   }

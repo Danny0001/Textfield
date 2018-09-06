@@ -40,12 +40,10 @@ function_logout(){
 }
 
   render() {
-    const { redirect} = this.state
+    const { redirect, logged} = this.state
     return (
       <div className='application'>
-        {(redirect) ? (
-          <Redirect to="/login" />
-        ) : (
+        {(logged) ? (
           <div className="application">
             <NavBar></NavBar>
             <LeftNavBar></LeftNavBar>
@@ -59,6 +57,8 @@ function_logout(){
             {/*<Perfil></Perfil>*/}
             <CuadroCrearDisp></CuadroCrearDisp>
           </div>
+        ) : (
+          <Redirect to="/login" />
       )}
       </div>
     );

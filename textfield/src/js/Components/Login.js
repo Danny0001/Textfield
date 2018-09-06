@@ -170,7 +170,9 @@ async handleSubmit(event) {
     .catch((err) => {
       this.setState({
         isFetching: false,
-      })})
+      })
+      alert("Incorrect password or email!");
+    })
 
     //this.ValidateAll(email, password)
 
@@ -210,7 +212,7 @@ async handleSubmit(event) {
       <div class="App bodyLog" id="large-header " >
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
         {(redirect || logged) ? (
-          <Redirect to="/app" />
+          <Redirect to="/Dashboard" />
         ) : (
 
         <form className="navbar-form CardLogin" id="login" onSubmit={ this.handleSubmit }>

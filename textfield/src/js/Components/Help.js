@@ -3,6 +3,7 @@ import './../../css/App.css'
 import NavBar from './NavBar.js'
 import LeftNavBar from './LeftNavBar.js'
 import Overlay from './Overlay.js'
+import { Redirect } from "react-router-dom";
 import { Button, Card, Elevation, Checkbox,Icon } from "@blueprintjs/core";
 import {
     Boundary,
@@ -25,19 +26,37 @@ import {
 import { Example, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
 
 class Help extends Component {
-cambio(){
-  console.log("dfvsdgvsdvsdf");
+
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      logged:false,
+    };
+  }
+
+  componentDidMount() {
+  if (document.cookie) {
+    this.setState({ logged:true })
+  }
 }
   render() {
+    const {logged}=this.state
     return (
       <div className="homeP">
-        <NavBar></NavBar>
-        <LeftNavBar></LeftNavBar>
-        <div className="content">
-          <h1>Help</h1>
-          <Overlay></Overlay>
+        {(logged) ? (
+        <div>
+          <NavBar></NavBar>
+          <LeftNavBar></LeftNavBar>
+          <div className="content">
+            <h1>Help</h1>
+            <Overlay></Overlay>
+          </div>
         </div>
-      </div>
+      ) : (
+        <Redirect to="/login" />
+    )}
+  </div>
     );
   }
 }

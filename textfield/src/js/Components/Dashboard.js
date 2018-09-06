@@ -35,8 +35,26 @@ class Dashboard extends Component {
   {
     super();
     this.state={
-      chartData:{}
+      Aux:'123456789',
+      chartData:{},
+      Dispositivo:[],
+      IsLoaded:false,
     }
+  }
+
+  componentDidMount(){
+    var url =" http://localhost:3001/api/device/"+this.state.Aux;
+    fetch(url)
+    .then(res => res.json())
+    .then(json => {
+      console.log(typeof json);
+      console.log('result', json);
+      this.setState({
+        Dispositivo:json,
+        IsLoaded:true,
+      })
+    console.log(this.state.Dispositivo.device.attributes.power)
+    });
   }
 
   componentWillMount(){
@@ -136,7 +154,7 @@ cambio(){
                   </h5>
                 </div>
                 <div>
-                  5
+                  1
                 </div>
                 </Card>
               </div>
@@ -148,9 +166,10 @@ cambio(){
                   </h5>
                 </div>
                 <div>
-                  3
+                  1
                 </div>
                 </Card>
+                {console.log(document.cookie)}
               </div>
               {/*
             <div className="DashboardCard">

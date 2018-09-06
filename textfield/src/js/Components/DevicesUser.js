@@ -52,12 +52,13 @@ componentDidMount(){
   .then(json => {
     console.log(typeof json);
     console.log('result', json);
-    let state = json.device.attributes.power === 'ON' ? true : false
+    let state = json.device.attributes.power === 'on' ? true : false
     this.setState({
       Dispositivo:json,
       IsLoaded:true,
       stateDevice: state
     })
+    console.log(state)
     console.log(this.state.Dispositivo.device.attributes.power)
     this.Getdips()
   });
@@ -90,7 +91,7 @@ Getdips(){
               {this.state.name}
             </div>
             <div className="statedisp">
-              Estado:
+              State:
               <div className="circlestate">
                 <Icon icon="full-circle" iconSize={10} className={( this.state.active ? "GreenColor" : "RedColor")}/>
               </div>

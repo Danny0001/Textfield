@@ -10,6 +10,7 @@ const OVERLAY_EXAMPLE_CLASS = "docs-overlay-example-transition";
 
 class InactiveButton extends React.Component
 {
+  /*
   openTools() {
   var btn = document.getElementById('btnTools2');
   console.log("hola");
@@ -27,6 +28,7 @@ class InactiveButton extends React.Component
 
   btn.className = className;
 }
+*/
   render() {
     let botonAct = ["botonapp"];
     return (
