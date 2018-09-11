@@ -103,7 +103,7 @@ getWatt = async () => {
     const db = "domergy"
     const response = await axios.get(`${host}/query?db=${db}&q=SELECT "value" FROM active_power WHERE ("device" = '${id}') AND time >= now() - 5m&epoch=ms`)
     const lengthAmp =((response.data.results[0].series[0].values.length)-1)
-    console.log(response.data.results[0].series[0].values[lengthAmp][1])
+    console.log("wattDash",response.data.results[0].series[0].values[lengthAmp][1])
     console.log(response)
   }catch(e){
     console.log(e)
