@@ -3,7 +3,7 @@ import {Bubble} from 'react-chartjs-2';
 import {Line} from 'react-chartjs-2';
 import axios from 'axios';
 
-class Chart2 extends Component {
+class ChartVolt extends Component {
 
   constructor(){
     super();
@@ -86,7 +86,7 @@ class Chart2 extends Component {
       const id = "123456789"
       const host = "http://localhost:8086"
       const db = "domergy"
-      const response = await axios.get(`${host}/query?db=${db}&q=SELECT "value" FROM active_power WHERE ("device" = '${id}') AND time >= now() - 5m&epoch=ms`)
+      const response = await axios.get(`${host}/query?db=${db}&q=SELECT "value" FROM voltage WHERE ("device" = '${id}') AND time >= now() - 5m&epoch=ms`)
       const lengthAmp =((response.data.results[0].series[0].values.length)-1)
       const dividid =lengthAmp/6
       const dividido = parseInt(dividid)
@@ -124,11 +124,11 @@ class Chart2 extends Component {
     render() {
       return (
         <div>
-          <h2>Energy(Watt)</h2>
+          <h2>Voltage(V)</h2>
           <Line data={this.state.chartData2} />
           {console.log("wattchart2", this.state.chartData2.datasets[0].data[6])}
         </div>
       );
     }
   }
-export default Chart2;
+export default ChartVolt;

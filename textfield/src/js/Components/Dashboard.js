@@ -3,6 +3,10 @@ import './../../css/App.css'
 import NavBar from './NavBar.js'
 import LeftNavBar from './LeftNavBar.js'
 import { Redirect } from "react-router-dom";
+import ChartVolt from './ChartVolt.js'
+import ChartKwToday from './ChartKwToday.js'
+import ChartKwTotal from './ChartKwTotal.js'
+import ChartAmp from './ChartAmp.js'
 import Chart from './Chart.js'
 import Chart2 from './Chart2.js'
 import Chart3 from './Chart3.js'
@@ -75,8 +79,9 @@ getVolt = async () => {
     const host = "http://localhost:8086"
     const db = "domergy"
     const response = await axios.get(`${host}/query?db=${db}&q=SELECT "value" FROM voltage WHERE ("device" = '${id}') AND time >= now() - 5m&epoch=ms`)
+    const lengthAmp =((response.data.results[0].series[0].values.length)-1)
     this.setState({
-      Volt:response.data.results[0].series[0].values[2][1],
+      Volt:response.data.results[0].series[0].values[lengthAmp][1],
     })
   }catch(e){
     console.log(e)
@@ -221,7 +226,7 @@ cambio(){
                   </h5>
                 </div>
                 <div>
-                  {(this.state.TodayKW)*105}
+                  {((this.state.TodayKW)*105).toFixed(3)}
                 </div>
                 </Card>
               </div>
@@ -302,7 +307,7 @@ cambio(){
 
                 <div className="CardElementInfo">
                   <Icon className="IconDollarKw" icon="dollar" iconSize={50} />
-                  <span className="CashKW"> {(this.state.TotalKW)*105.3}</span>
+                  <span className="CashKW"> {((this.state.TotalKW)*105.3).toFixed(3)}</span>
                 </div>
               </div>
               <div className="CardDashboardTittle">
@@ -329,6 +334,34 @@ cambio(){
             <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
               <div className="CardDashboardInfo">
                 <Chart2/>
+              </div>
+            </Card>
+            </div>
+            <div className="DashboardCard">
+            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
+              <div className="CardDashboardInfo">
+                <ChartVolt/>
+              </div>
+            </Card>
+            </div>
+            <div className="DashboardCard">
+            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
+              <div className="CardDashboardInfo">
+                <ChartKwToday/>
+              </div>
+            </Card>
+            </div>
+            <div className="DashboardCard">
+            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
+              <div className="CardDashboardInfo">
+                <ChartKwTotal/>
+              </div>
+            </Card>
+            </div>
+            <div className="DashboardCard">
+            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
+              <div className="CardDashboardInfo">
+                <ChartAmp/>
               </div>
             </Card>
             </div>
