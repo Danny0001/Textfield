@@ -119,9 +119,8 @@ editItem(edit){
         {(edit) ? (
           <div className="content">
           <div className="cardProfile1">
-            <div><h1>User Profile</h1></div>
+            <div><h2>User Profile</h2></div>
             <ButtonGroup minimal={true} >
-                <Button class="bp3-button bp3-icon-add " type="button"  icon="key">Change Password</Button>
                 {/* <Button class="bp3-button bp3-icon-add " type="button" intent="danger" icon="trash">Delete</Button>*/}
               {/*  <AnchorButton rightIcon="caret-down">Options</AnchorButton>*/}
            </ButtonGroup>
@@ -159,10 +158,9 @@ editItem(edit){
         </div>):
       (<div className="content">
       <div className="cardProfile1">
-        <div><h1>User Profile</h1></div>
+        <div><h2>User Profile</h2></div>
         <ButtonGroup minimal={true} >
             <Button class="bp3-button bp3-icon-add " type="button"  icon="edit" onClick={this.editItem.bind(this)}>Edit</Button>
-            <Button class="bp3-button bp3-icon-add " type="button"  icon="key">Change Password</Button>
             {/* <Button class="bp3-button bp3-icon-add " type="button" intent="danger" icon="trash">Delete</Button>*/}
           {/*  <AnchorButton rightIcon="caret-down">Options</AnchorButton>*/}
         </ButtonGroup>

@@ -3,6 +3,7 @@ import './../../css/App.css'
 import { Redirect } from "react-router-dom";
 import NavBar from './NavBar.js'
 import LeftNavBar from './LeftNavBar.js'
+import Table from './Table.js';
 import { Button, Card, Elevation, Checkbox,Icon } from "@blueprintjs/core";
 import {
     Boundary,
@@ -61,11 +62,12 @@ class Analisys extends Component {
     return (
       <div className="homeP">
         {(logged) ? (
-      <div className="homeP">
+      <div>
         <NavBar></NavBar>
         <LeftNavBar></LeftNavBar>
         <div className="content">
-          <h1>Analisys</h1>
+          <h2>Telemetry</h2>
+          <Table></Table>
         </div>
       </div>
     ) : (

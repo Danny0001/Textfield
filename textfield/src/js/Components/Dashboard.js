@@ -4,8 +4,6 @@ import NavBar from './NavBar.js'
 import LeftNavBar from './LeftNavBar.js'
 import { Redirect } from "react-router-dom";
 import ChartVolt from './ChartVolt.js'
-import ChartKwToday from './ChartKwToday.js'
-import ChartKwTotal from './ChartKwTotal.js'
 import ChartAmp from './ChartAmp.js'
 import Chart from './Chart.js'
 import Chart2 from './Chart2.js'
@@ -200,7 +198,7 @@ cambio(){
     return (
       <div className="homeP">
         {(logged) ? (
-      <div className="homeP Dashback">
+      <div className=" Dashback">
         <NavBar></NavBar>
         <LeftNavBar></LeftNavBar>
         <div >
@@ -300,7 +298,7 @@ cambio(){
             <Card interactive={true} elevation={Elevation.TWO} className="CardNum CardSelf ">
               <div className="CardDashboardTittle">
               <h5>
-                Cash
+                Total Cash
               </h5>
             </div>
               <div className="CardDashboardInfo">
@@ -312,7 +310,7 @@ cambio(){
               </div>
               <div className="CardDashboardTittle">
               <h5>
-                KW/H
+                Total KW/H
               </h5>
             </div>
               <div className="CardDashboardInfo">
@@ -323,13 +321,6 @@ cambio(){
               </div>
             </Card>
           </div>
-            <div className="DashboardCard">
-            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
-              <div className="CardDashboardInfo">
-                <Chart chartData={this.state.chartData} LegendPosition="top"  Month=": May"/>
-              </div>
-            </Card>
-            </div>
             <div className="DashboardCard">
             <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
               <div className="CardDashboardInfo">
@@ -347,41 +338,7 @@ cambio(){
             <div className="DashboardCard">
             <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
               <div className="CardDashboardInfo">
-                <ChartKwToday/>
-              </div>
-            </Card>
-            </div>
-            <div className="DashboardCard">
-            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
-              <div className="CardDashboardInfo">
-                <ChartKwTotal/>
-              </div>
-            </Card>
-            </div>
-            <div className="DashboardCard">
-            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
-              <div className="CardDashboardInfo">
                 <ChartAmp/>
-              </div>
-            </Card>
-            </div>
-            <div className="DashboardCard">
-            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
-              <div className="CardDashboardInfo">
-                <Chart3/>
-              </div>
-            </Card>
-            </div>
-            <div className="DashboardCard">
-            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
-              <div className="CardDashboardInfo">
-                <Chart4/>
-              </div>
-            </Card>
-            </div>
-            <div className="DashboardCard">
-            <Card interactive={true} elevation={Elevation.TWO} className=" CardSelf ">
-              <div className="CardDashboardInfo">
               </div>
             </Card>
             </div>

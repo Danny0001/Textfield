@@ -51,7 +51,7 @@ class Help extends Component {
           <NavBar></NavBar>
           <LeftNavBar></LeftNavBar>
           <div className="content">
-            <h1>Help</h1>
+            <h2>Help</h2>
             <Overlay></Overlay>
           </div>
         </div>

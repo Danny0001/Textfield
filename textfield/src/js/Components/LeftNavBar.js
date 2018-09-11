@@ -66,7 +66,7 @@ class LeftNavBar extends Component {
                        <Icon icon="timeline-line-chart"></Icon>
                        <span className="spacelb"></span>
                         <span className="nav-text">
-                            Analisys
+                            Telemetry
                         </span>
                     </a>
                 </li>

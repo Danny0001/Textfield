@@ -103,7 +103,8 @@ class ChartVolt extends Component {
             hrminc],
           datasets:[
             {
-              label:["Watt/10min"],
+              label:["Volt/10min"],
+              backgroundColor: "rgba(63, 142, 191, 0.72)",
               data:[
                 response.data.results[0].series[0].values[lengthAmp-dividido*5][1],
                 response.data.results[0].series[0].values[lengthAmp-dividido*4][1],

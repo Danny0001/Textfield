@@ -104,6 +104,7 @@ class Chart2 extends Component {
           datasets:[
             {
               label:["Watt/10min"],
+              backgroundColor: "rgba(218, 21, 21, 0.75)",
               data:[
                 response.data.results[0].series[0].values[lengthAmp-dividido*5][1],
                 response.data.results[0].series[0].values[lengthAmp-dividido*4][1],

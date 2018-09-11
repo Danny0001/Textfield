@@ -132,13 +132,12 @@ Getdips(){
               {this.state.name}
             </div>
             <div className="statedisp">
-              {/*
+
               State:
               <div className="circlestate">
-                <Icon icon="full-circle" iconSize={10} className={( this.state.active ? "GreenColor" : "RedColor")}/>
+                <Icon icon="full-circle" iconSize={10} className={( this.state.online ? "GreenColor" : "RedColor")}/>
               </div>
-              */}
-              <button type="button" class="bp3-button bp3-icon-edit">Edit</button>
+
           </div>
           </div>
         </div>
