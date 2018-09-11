@@ -45,7 +45,12 @@ class Profile extends Component {
     this.handleChange = this.handleChange.bind(this);
 }
 
-
+componentWillMount() {
+  if (document.cookie) {
+  this.setState({
+    logged:true })
+}
+}
 componentDidMount(){
   if (document.cookie) {
     this.setState({ logged:true })

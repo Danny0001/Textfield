@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './../../css/App.css'
 import Logo from './../../css/imagenes/LOGO.png'
 import 'font-awesome/css/font-awesome.css';
+import { Button, Card, Elevation, Checkbox,Icon } from "@blueprintjs/core";
 
 class Home extends Component {
   render() {
@@ -37,6 +38,7 @@ class Home extends Component {
         </div>
         <div className="seccion3">
           <section id="beneficios">
+            <Card interactive={true} elevation={Elevation.TWO} className="CardHome">
             <h1>Beneficios</h1>
             <div><br/></div>
             <div><br/></div>
@@ -93,10 +95,12 @@ class Home extends Component {
                 </div>
               </div>
             </div>
+          </Card>
           </section>
         </div>
         <div className="seccion4">
           <section id="contacto">
+            <div className="HomeContacto">
             <h1>Contacto</h1>
             <div>
               <h3>¿Tienes dudas, consultas o sugerencias? No dudes en enviarnos un mail</h3>
@@ -112,6 +116,7 @@ class Home extends Component {
                 <p>Virginio Arias 1371, Ñuñoa, Región Metropolitana</p>
               </div>
             </div>
+          </div>
           </section>
 
         </div>

@@ -15,6 +15,7 @@ constructor(props)
   this.state = {
     redirect:false,
     logged:false,
+    aux:true,
   };
   this.function_logout = this.function_logout.bind(this);
 }
@@ -40,10 +41,10 @@ function_logout(){
 }
 
   render() {
-    const { redirect, logged} = this.state
+    const { redirect, aux} = this.state
     return (
       <div className='application'>
-        {(logged) ? (
+        {(aux) ? (
           <div className="application">
             <NavBar></NavBar>
             <LeftNavBar></LeftNavBar>

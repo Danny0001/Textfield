@@ -35,11 +35,13 @@ class Help extends Component {
     };
   }
 
-  componentDidMount() {
-  if (document.cookie) {
-    this.setState({ logged:true })
+  componentWillMount() {
+    if (document.cookie) {
+    this.setState({
+      logged:true })
   }
 }
+
   render() {
     const {logged}=this.state
     return (

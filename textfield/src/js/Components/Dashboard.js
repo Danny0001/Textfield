@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import './../../css/App.css'
 import NavBar from './NavBar.js'
 import LeftNavBar from './LeftNavBar.js'
+import { Redirect } from "react-router-dom";
 import Chart from './Chart.js'
 import Chart2 from './Chart2.js'
 import Chart3 from './Chart3.js'
 import Chart4 from './Chart4.js'
+import axios from 'axios';
+
+
 import { Button, Card, Elevation, Checkbox,Icon } from "@blueprintjs/core";
 import {
     Boundary,
@@ -35,30 +39,114 @@ class Dashboard extends Component {
   {
     super();
     this.state={
-      Aux:'123456789',
+      logged:false,
       chartData:{},
-      Dispositivo:[],
+      User:[],
       IsLoaded:false,
+      NumDevice:'',
+      Ampere:'',
+      Watt:'',
+      Volt:'',
+      TodayKW:'',
+      TotalKW:'',
+
     }
   }
 
-  componentDidMount(){
-    var url =" http://localhost:3001/api/device/"+this.state.Aux;
-    fetch(url)
-    .then(res => res.json())
-    .then(json => {
-      console.log(typeof json);
-      console.log('result', json);
-      this.setState({
-        Dispositivo:json,
-        IsLoaded:true,
-      })
-    console.log(this.state.Dispositivo.device.attributes.power)
-    });
+
+  async componentDidMount(){
+
+    await this.getVolt()
+    await this.getAmp()
+    await this.getWatt()
+    await this.getToday()
+    await this.getTotalKW()
   }
+
+  GetNum(){
+    this.setState({
+      NumDevice:this.state.User.user.devices.length,
+    })
+  }
+
+getVolt = async () => {
+  try{
+    const id = "123456789"
+    const host = "http://localhost:8086"
+    const db = "domergy"
+    const response = await axios.get(`${host}/query?db=${db}&q=SELECT "value" FROM voltage WHERE ("device" = '${id}') AND time >= now() - 5m&epoch=ms`)
+    this.setState({
+      Volt:response.data.results[0].series[0].values[2][1],
+    })
+  }catch(e){
+    console.log(e)
+  }
+}
+getAmp = async () => {
+  try{
+    const id = "123456789"
+    const host = "http://localhost:8086"
+    const db = "domergy"
+    const response = await axios.get(`${host}/query?db=${db}&q=SELECT "value" FROM current WHERE ("device" = '${id}') AND time >= now() - 5m&epoch=ms`)
+    const lengthAmp =((response.data.results[0].series[0].values.length)-1)
+    this.setState({
+      Ampere:response.data.results[0].series[0].values[lengthAmp][1],
+    })
+  }catch(e){
+    console.log(e)
+  }
+}
+getWatt = async () => {
+  try{
+    const id = "123456789"
+    const host = "http://localhost:8086"
+    const db = "domergy"
+    const response = await axios.get(`${host}/query?db=${db}&q=SELECT "value" FROM active_power WHERE ("device" = '${id}') AND time >= now() - 5m&epoch=ms`)
+    const lengthAmp =((response.data.results[0].series[0].values.length)-1)
+    console.log(response.data.results[0].series[0].values[lengthAmp][1])
+    console.log(response)
+  }catch(e){
+    console.log(e)
+  }
+}
+
+getToday = async () => {
+  try{
+    const id = "123456789"
+    const host = "http://localhost:8086"
+    const db = "domergy"
+    const response = await axios.get(`${host}/query?db=${db}&q=SELECT "value" FROM energy_day WHERE ("device" = '${id}') AND time >= now() - 5m&epoch=ms`)
+    const lengthAmp =((response.data.results[0].series[0].values.length)-1)
+
+    this.setState({
+      TodayKW:response.data.results[0].series[0].values[lengthAmp][1],
+    })
+  }catch(e){
+    console.log(e)
+  }
+}
+
+getTotalKW = async () => {
+  try{
+    const id = "123456789"
+    const host = "http://localhost:8086"
+    const db = "domergy"
+    const response = await axios.get(`${host}/query?db=${db}&q=SELECT "value" FROM energy_total WHERE ("device" = '${id}') AND time >= now() - 5m&epoch=ms`)
+    const lengthAmp =((response.data.results[0].series[0].values.length)-1)
+    this.setState({
+      TotalKW:response.data.results[0].series[0].values[lengthAmp][1],
+    })
+  }catch(e){
+    console.log(e)
+  }
+}
 
   componentWillMount(){
     this.getChartData();
+    if (document.cookie) {
+    this.setState({
+      logged:true })
+  }
   }
 
   getChartData(){
@@ -103,7 +191,10 @@ cambio(){
   console.log("dfvsdgvsdvsdf");
 }
   render() {
+    const {logged}=this.state
     return (
+      <div className="homeP">
+        {(logged) ? (
       <div className="homeP Dashback">
         <NavBar></NavBar>
         <LeftNavBar></LeftNavBar>
@@ -118,7 +209,7 @@ cambio(){
                   </h5>
                 </div>
                 <div>
-                  56.4
+                  {this.state.TodayKW}
                 </div>
                 </Card>
               </div>
@@ -130,7 +221,7 @@ cambio(){
                   </h5>
                 </div>
                 <div>
-                  $850
+                  {(this.state.TodayKW)*105}
                 </div>
                 </Card>
               </div>
@@ -150,11 +241,11 @@ cambio(){
                 <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
                   <div className="CardDashboardTittle">
                   <h5>
-                    N° Devices
+                    Voltage
                   </h5>
                 </div>
                 <div>
-                  1
+                  {this.state.Volt}
                 </div>
                 </Card>
               </div>
@@ -162,14 +253,14 @@ cambio(){
                 <Card interactive={true} elevation={Elevation.TWO} className="smallCard">
                   <div className="CardDashboardTittle">
                   <h5>
-                    N° Active Device
+                    Ampere
                   </h5>
                 </div>
                 <div>
-                  1
+                  {this.state.Ampere}
                 </div>
                 </Card>
-                {console.log(document.cookie)}
+            {/*console.log(curl -G 'http://localhost:3000/query?pretty=true' --data-urlencode "db=pird" --data-urlencode "q=SELECT\"value\"FROM\"voltage\"WHERE\"device\"='123456789' AND time>=now()-5m")*/}
               </div>
               {/*
             <div className="DashboardCard">
@@ -211,7 +302,7 @@ cambio(){
 
                 <div className="CardElementInfo">
                   <Icon className="IconDollarKw" icon="dollar" iconSize={50} />
-                  <span className="CashKW"> 30.000</span>
+                  <span className="CashKW"> {(this.state.TotalKW)*105.3}</span>
                 </div>
               </div>
               <div className="CardDashboardTittle">
@@ -222,7 +313,7 @@ cambio(){
               <div className="CardDashboardInfo">
                 <div className="CardElementInfo">
                   <Icon className="IconDollarKw" icon="offline" iconSize={50} />
-                  <span className="CashKW"> 75.34 Kw/h</span>
+                  <span className="CashKW"> {this.state.TotalKW}</span>
                 </div>
               </div>
             </Card>
@@ -265,6 +356,10 @@ cambio(){
           </div>
         </div>
       </div>
+    ) : (
+      <Redirect to="/login" />
+  )}
+</div>
     );
   }
 }

@@ -32,7 +32,7 @@ body {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: black;
   border: 3px solid white;
   padding: 5px 50px 5px 50px;
 }
@@ -267,7 +267,7 @@ outline: none;
   display:flex;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .seccion2 {
@@ -357,6 +357,12 @@ outline: none;
   color:#FAFAFA;
   margin:0px;
 
+}
+.HomeContacto{
+  display:flex;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
 }
 
 .barraIzquierda{
@@ -982,6 +988,8 @@ nav ul,nav li {
 
 {/*----------------------------------------------------------------------------------------*/}
 {/*-----------------------------------Dashboard--------------------------------------------*/}
+
+
 .Dashback{
 //  background-image:  url("imagenes/Dashboard1.jpg");
   background-repeat: no-repeat;
@@ -1128,7 +1136,7 @@ nav ul,nav li {
   align-items: center;
 }
 .textobloque {
-  color:white;
+  color:black;
 }
 
 {/*----------------------------------------------------------------------------------------*/}
@@ -1138,4 +1146,10 @@ nav ul,nav li {
   background-color: black;
   width: 50%;
   height: 50%;
+}
+
+.CardHome{
+  width: 100%;
+
+  background-color: rgba(194, 193, 193, 0.5);
 }

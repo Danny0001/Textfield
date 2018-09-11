@@ -12,6 +12,8 @@ import Logo from './../../css/imagenes/LOGO.png'
 //import DropdownProfile from './DropDownProfile.js'
 import { instanceOf } from 'prop-types';
 import { Cookies } from 'react-cookie';
+import SetAuthorizationToken from './../libs/SetAuthorizationToken.js';
+
 
 class Login extends Component
 {
@@ -154,11 +156,21 @@ async handleSubmit(event) {
         email: this.state.email,
         password:this.state.password
       })*/}
-      axios.post("http://localhost:3002/api/auth/signin",{email: this.state.email,
-      password:this.state.password})
+      axios.post("http://localhost:3002/api/auth/signin",
+      {
+        email: this.state.email,
+        password:this.state.password
+    })
 
     .then(async response => {
-      console.log("Cookies are ", document.cookie)
+      console.log(document.cookie)
+      console.log(response.data.token)
+      SetAuthorizationToken(response.data.token)
+      localStorage.setItem("Cookie",response.data.token);
+      localStorage.setItem("Log",'true');
+      console.log(localStorage.getItem("Cookie"))
+      document.cookie = 'authorization =' + localStorage.getItem("Cookie") + '; max-age=' + 60*60 + ";path=/";
+
       //const resemail = await fetch('api/user/login${email}')
       //const json = await resemail.json()
       //console.log("en .then")
@@ -205,6 +217,7 @@ async handleSubmit(event) {
       this.setState({
         isFetching: false,
       })  })*/
+
 }
   render(){
     const { errors, redirect,logged } = this.state

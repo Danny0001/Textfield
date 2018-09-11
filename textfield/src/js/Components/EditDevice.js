@@ -39,72 +39,30 @@ class DevicesUser extends Component {
     online:'',
     name:'',
     active:'',
-    stateDevice: '',
-    deviceID:this.props.id,
-    Aux2:'dani',
+    id: '',
   }
 }
 
+
+
 componentDidMount(){
-  console.log(this.props.id)
-  /*this.setState({
-    deviceID:this.props.id
-  })*/
-  console.log("id dips",this.state.deviceID)
-  var url =" http://localhost:3001/api/device/"+this.state.deviceID;
+  var url =" http://localhost:3001/api/device/"+this.state.Aux;
   fetch(url)
   .then(res => res.json())
   .then(json => {
     console.log(typeof json);
     console.log('result', json);
-    let state;
-    (json.device.online)?(state = json.device.attributes.power === 'on' ? true : false):(state:false)
-    console.log("jajajjaja",json.device.online)
-    //let state = json.device.attributes.power === 'on' ? true : false
+    let state = json.device.attributes.power === 'on' ? true : false
     this.setState({
       Dispositivo:json,
       IsLoaded:true,
       stateDevice: state
     })
-
-
-    //console.log(this.state.state)
-    //console.log(this.state.Dispositivo.device.attributes.power)
-    console.log("khkjh",this.state.online)
+    console.log(state)
+    console.log(this.state.Dispositivo.device.attributes.power)
     this.Getdips()
-    console.log(this.state.online)
-
-    /*{(this.state.online==true)?(
-      this.Identification()
-    ):(
-      this.setState({
-        stateDevice: false
-      })
-    )}
-    */
-    console.log("kzchkszhk",this.state.stateDevice)
   });
 }
-
-Estadodisp(){
-  {(this.state.online==true)?(
-    this.Identification()
-  ):(
-    this.setState({
-      stateDevice: false,
-    })
-  )}
-  console.log("stateDevice false", this.state.stateDevice)
-}
-
-Identification(){
-  let state = this.state.Dispositivo.device.attributes.power === 'on' ? true : false
-  this.setState({
-    stateDevice: state
-  })
-  console.log("stateDevice true", this.state.stateDevice)
-}
-
 Getdips(){
   this.setState({
     online: this.state.Dispositivo.device.online,
@@ -114,10 +72,9 @@ Getdips(){
 }
 
   render() {
-    console.log(":O", this.state.deviceID)
-    console.log("dani no dice", this.state.stateDevice)
+    console.log(this.state.stateDevice)
       return (
-        <div className="CuadroDispositivo2 pt-card pt-interactive pt-elevation-2 " id={this.state.deviceID}>
+        <div className="CuadroDispositivo2 pt-card pt-interactive pt-elevation-2 ">
           <div className="imagedispositivo">
 
             {(this.state.online)?(
@@ -125,7 +82,9 @@ Getdips(){
             ):(
               <InactiveButton></InactiveButton>
             )
+
             }
+
           </div>
           <div className="infodisp">
             <div className="Nombredisp" >

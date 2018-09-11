@@ -20,7 +20,8 @@ class LeftNavBar extends Component {
   }
   }
   function_logout(){
-    axios({
+    document.cookie = 'authorization =' + localStorage.getItem("Cookie") + '; max-age=' + 0 + ";path=/";
+    /*axios({
         method: "POST",
         url: "http://localhost:8001/api/user/logout",
       })
@@ -32,7 +33,7 @@ class LeftNavBar extends Component {
     })
     .catch((err) => {
         console.log("error al cerrar sesion")
-      })
+      })*/
   }
 
   render() {
