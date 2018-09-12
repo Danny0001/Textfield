@@ -24,29 +24,15 @@ import {
 import { Example, handleStringChange, IExampleProps } from "@blueprintjs/docs-theme";
 
 class Overlay extends Component {
-  openTools() {
-  var btn = document.getElementById('btnTools2');
-  console.log("hola");
-  var className = btn.className;
 
-  if (className === "botonAct") {
-      className = "botonAct open";
-      document.getElementById('migration-Overlay').className = "CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer show active";
-  }
-
-  else {
-      className = "botonAct";
-      document.getElementById('migration-Overlay').className = "CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer";
-  }
-
-  btn.className = className;
-}
   render() {
     return (
-        <form id="migration-Overlay" className="CuadroCrearDisp pt-card .pt-elevation-4 .pt-interactive formcontainer">
-          <label onClick={this.openTools} className="close">x</label>
-          <label>This Device is Not Conected...</label>
-        </form>
+      <div className='HelpBar'>
+        <Button className="ButtonHelp" icon="dashboard" intent="success" text="DashBoard" />
+        <Button className="ButtonHelp" icon="mobile-phone" intent="success" text="Devices" />
+        <Button className="ButtonHelp" icon="timeline-line-chart" intent="success" text="Telemetry" />
+        <Button className="ButtonHelp" icon="user" intent="success" text="Profile" />
+      </div>
     );
   }
 }

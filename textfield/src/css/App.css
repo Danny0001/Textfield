@@ -238,7 +238,6 @@ outline: none;
 .refs {
   text-decoration: none;
   color: white;
-
 }
 .navbar {
   display: flex;
@@ -1239,10 +1238,67 @@ td{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 .TableAlgo{
-  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-  background: linear-gradient(to right, #25c481, #25b7c4);
+  background: -webkit-linear-gradient(left, rgba(144, 157, 242, 0.59), rgba(208, 144, 242, 0.54), rgba(242, 144, 226, 0.54));
+  background: linear-gradient(to right, rgba(144, 157, 242, 0.59), rgba(208, 144, 242, 0.54), rgba(242, 144, 226, 0.54));
   font-family: 'Roboto', sans-serif;
 }
 .SectionTable{
   margin: 50px;
+}
+{/*----------------------------------------------------------------------------------------*/}
+{/*-----------------------------------HELP------------------------------------------------*/}
+
+.HelpBar{
+  width: 90%;
+  height: 7%;
+  display: flex;
+  align-items:center;
+  padding-right: 70px;
+  padding-left: 70px;
+  justify-content: flex-start;
+  left: 0px;
+  position: fixed;
+  left:70px;
+  right: 0px ;
+  top: 50px;
+  background-color: rgba(178, 178, 178, 0.51);
+  border-radius: 0px 0px 10px 10px;
+  box-shadow:  0 10px 10px rgba(0,0,0,0.22);
+}
+.HelpContainer{
+  width: 90%;
+  height: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 8%;
+  margin-left: 30px;
+}
+
+.ButtonHelp{
+  margin: 10px;
+}
+.CardHelp{
+  margin-bottom: 30px;
+  margin-top: 70px;
+}
+.HelpLi{
+  display: inline;
+  text-align: center;
+  margin: 0 20px 0 0;
+  width: 30%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.HelpLi .HelpA:hover {
+    color: Blue;
+}
+.HelpLi .HelpA{
+    color: black;
+}
+
+.DivHelp{
+  padding-top: 20px;
+  border-top: solid rgba(183, 183, 183, 0.65);
 }

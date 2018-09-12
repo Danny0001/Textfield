@@ -85,6 +85,7 @@ getVolt = async () => {
     console.log(e)
   }
 }
+
 getAmp = async () => {
   try{
     const id = "123456789"
@@ -265,35 +266,7 @@ cambio(){
                 </Card>
             {/*console.log(curl -G 'http://localhost:3000/query?pretty=true' --data-urlencode "db=pird" --data-urlencode "q=SELECT\"value\"FROM\"voltage\"WHERE\"device\"='123456789' AND time>=now()-5m")*/}
               </div>
-              {/*
-            <div className="DashboardCard">
-            <Card interactive={true} elevation={Elevation.TWO} className="CardSelf">
-              <div className="CardDashboardTittle">
-              <h5>
-                Dispositivo X
-              </h5>
-            </div>
-              <div className="CardDashboardInfo">
-                <div className="CardElementInfo">
-                  <span className="SpanTitleDashboard">ID:  </span>
-                  <span>123456789</span>
-                </div>
-                <div className="CardElementInfo">
-                  <span className="SpanTitleDashboard">Name:  </span>
-                  <span>X</span>
-                </div>
-                <div className="CardElementInfo">
-                  <span className="SpanTitleDashboard">Type:  </span>
-                  <span>Sonoff 1 entrada</span>
-                </div>
-                <div className="CardElementInfo">
-                  <span className="SpanTitleDashboard">Type:  </span>
-                  <span>Medidor de consumo energetico</span>
-                </div>
-              </div>
-            </Card>
-            </div>
-            */}
+
             <div className="DashboardCard">
             <Card interactive={true} elevation={Elevation.TWO} className="CardNum CardSelf ">
               <div className="CardDashboardTittle">
