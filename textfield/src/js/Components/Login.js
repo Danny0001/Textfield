@@ -250,7 +250,6 @@ async handleSubmit(event) {
               Types={['password']}
               //Patterns="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               onChange={ this.handleChange }/>
-            <div className="link"><a href='http://www.google.com' className='ForgotPass'>Olvidaste tu contraseña?</a></div>
             <button onClick={ this.handleClick } className="ButtonLogin">Ingresar</button>
           </form>
         )}

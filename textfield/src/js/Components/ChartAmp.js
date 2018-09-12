@@ -9,7 +9,7 @@ class ChartAmp extends Component {
     super();
     this.state={
       chartData2:{
-          labels: ['February', 'March', 'April', 'May', 'June', 'July'],
+          labels: ['', '', '', '', '', ''],
           datasets: [
             {
               label:['Kw/h'],

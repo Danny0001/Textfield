@@ -51,8 +51,11 @@ associateDevice(){
     }
     }
   )
-
-  alert(this.state.token)
+  var id="id dispositivo: "+this.state.IdentificadorDisp
+  var pass="Password dispositivo: "+this.state.PassDevice
+  alert(id)
+  alert(pass)
+  alert('id usuario: 05360643-ee4a-44fa-95e5-a4c3463bccd1')
 }
 
 openTools() {
